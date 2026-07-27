@@ -8,3 +8,5 @@
 ## 27 Jul 2026
 
 - Hoàn thành mô hình hóa quy trình phát triển phần mềm
+
+![Mô hình hóa quy trình phát triển phần mềm](./diagram-27072026.svg)
