@@ -16,3 +16,4 @@
 ## 01 Aug 2026
 
 - Hoàn thiện mô hình hóa quy trình phát triển phần mềm (Rubik 2)
+- Mô tả quy trình bằng lời (Rubik 1) -> https://docs.google.com/document/d/1sj0qO-C9QNed_lNKlr-mHoXA1vtG-zrsOiuRBxRA0lc/edit?usp=sharing
