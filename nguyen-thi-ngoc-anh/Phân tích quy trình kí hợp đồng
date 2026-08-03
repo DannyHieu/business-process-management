@@ -1,0 +1,47 @@
+1. Mô tả quy trình bằng lời
+Quy trình bắt đầu khi công ty tiếp nhận nhu cầu hoặc cơ hội kinh doanh từ khách hàng và kết thúc khi hợp đồng được ký kết hoặc cơ hội không tiếp tục.
+1.	Tiếp nhận yêu cầu/cơ hội từ khách hàng: Khách hàng gửi nhu cầu về phát triển phần mềm, triển khai hệ thống, bảo trì, chuyển đổi số hoặc các dịch vụ CNTT khác. Bộ phận Sales ghi nhận thông tin và tạo cơ hội kinh doanh (Opportunity). 
+2.	Thu thập và làm rõ nhu cầu: Sales phối hợp với BA/Pre-sales trao đổi với khách hàng để xác định bài toán, phạm vi sơ bộ, yêu cầu nghiệp vụ/kỹ thuật, thời gian mong muốn, ngân sách và các ràng buộc. 
+3.	Đánh giá cơ hội: Công ty đánh giá mức độ phù hợp và khả thi của cơ hội dựa trên năng lực chuyên môn, nguồn lực, công nghệ, thời gian, chi phí, rủi ro và khả năng thương mại. Nếu không phù hợp, cơ hội được từ chối hoặc đóng. 
+4.	Phân tích và xây dựng giải pháp sơ bộ: Pre-sales/Solution Architect cùng các bộ phận liên quan xây dựng phương án đáp ứng nhu cầu khách hàng, xác định phạm vi công việc, giải pháp kỹ thuật, mô hình triển khai và nguồn lực dự kiến. 
+5.	Ước lượng và lập đề xuất: Nhóm phụ trách thực hiện ước lượng effort, nhân sự, thời gian và chi phí; từ đó xây dựng Proposal/Quotation (đề xuất/báo giá) gửi khách hàng. 
+6.	Khách hàng đánh giá đề xuất: Khách hàng xem xét giải pháp, phạm vi, tiến độ và giá. Khách hàng có thể chấp thuận, yêu cầu điều chỉnh hoặc từ chối đề xuất. 
+7.	Đàm phán: Nếu cần điều chỉnh, hai bên thương lượng về phạm vi, giá, tiến độ, nguồn lực, trách nhiệm, SLA, điều khoản thanh toán và các điều kiện thương mại khác. Proposal có thể được cập nhật nhiều lần. 
+8.	Soạn thảo và rà soát hợp đồng: Khi hai bên thống nhất các nội dung chính, bộ phận Sales/Commercial phối hợp với Legal và các bên liên quan xây dựng hợp đồng, Statement of Work (SOW – phạm vi công việc) và các phụ lục cần thiết. 
+9.	Phê duyệt nội bộ: Hợp đồng được kiểm tra và phê duyệt theo thẩm quyền của công ty về giá, tài chính, pháp lý, nguồn lực, rủi ro và các cam kết với khách hàng. Nếu chưa đạt yêu cầu, hồ sơ được trả lại để điều chỉnh. 
+10.	Gửi hợp đồng và hoàn tất với khách hàng: Dự thảo hợp đồng được gửi cho khách hàng kiểm tra. Nếu có yêu cầu thay đổi, hai bên tiếp tục trao đổi và hoàn thiện nội dung. 
+11.	Ký kết hợp đồng: Khi cả hai bên thống nhất và hoàn tất các phê duyệt cần thiết, đại diện có thẩm quyền của hai bên ký hợp đồng. Cơ hội kinh doanh được chuyển thành hợp đồng/dự án để chuẩn bị triển khai. 
+Luồng tổng quát:
+Tiếp nhận cơ hội → Làm rõ nhu cầu → Đánh giá cơ hội → Xây dựng giải pháp → Ước lượng & báo giá → Khách hàng đánh giá → Đàm phán → Soạn hợp đồng → Phê duyệt → Ký hợp đồng
+
+2. Actor – Tác nhân tham gia
+Actor	Vai trò trong quy trình
+Khách hàng	Đưa ra nhu cầu, cung cấp thông tin, đánh giá proposal, đàm phán và ký hợp đồng
+Sales / Account Manager	Tiếp nhận và quản lý cơ hội, đầu mối làm việc với khách hàng, điều phối quá trình thương mại
+BA / Pre-sales	Làm rõ yêu cầu nghiệp vụ, hỗ trợ xác định phạm vi và xây dựng đề xuất
+Solution Architect / Technical Team	Đánh giá kỹ thuật, đề xuất giải pháp và hỗ trợ estimation
+Delivery / Project Management	Đánh giá khả năng triển khai, nguồn lực, tiến độ và rủi ro delivery
+Commercial / Finance	Xây dựng/kiểm tra giá, chi phí, lợi nhuận và điều khoản tài chính
+Legal	Kiểm tra và đàm phán các điều khoản pháp lý, hợp đồng
+Management / Approver	Phê duyệt các cam kết kinh doanh theo thẩm quyền
+Đại diện có thẩm quyền hai bên	Ký kết hợp đồng
+Có thể gom thành khoảng 5–6 lane để sơ đồ không quá vụn, ví dụ: Khách hàng – Sales – Pre-sales/Technical – Delivery – Finance/Legal – Management.
+
+3. Đối tượng khách hàng
+Đối tượng khách hàng của quy trình là các tổ chức/doanh nghiệp có nhu cầu sử dụng dịch vụ CNTT và phát triển phần mềm, đặc biệt phù hợp với mô hình outsourcing.
+Có thể chia thành:
+•	Khách hàng mới: doanh nghiệp chưa từng sử dụng dịch vụ của công ty. 
+•	Khách hàng hiện hữu: có nhu cầu triển khai dự án mới, mở rộng phạm vi hoặc ký hợp đồng/SOW mới. 
+•	Doanh nghiệp trong nước và quốc tế: các doanh nghiệp có nhu cầu thuê ngoài phát triển, vận hành hoặc chuyển đổi hệ thống CNTT. 
+•	Theo lĩnh vực: ngân hàng – tài chính, bảo hiểm, sản xuất, ô tô, bán lẻ, logistics, healthcare, aviation, public sector... tùy phạm vi nhóm muốn đề cập. 
+:Khách hàng của quy trình là các tổ chức/doanh nghiệp có nhu cầu thuê FPT Software cung cấp dịch vụ phát triển, triển khai, bảo trì hoặc chuyển đổi hệ thống phần mềm.
+
+4. Các khả năng kết quả của quy trình
+Kết quả	Mô tả
+1. Contract Signed – Ký hợp đồng thành công	Hai bên thống nhất và ký hợp đồng → chuyển sang giai đoạn chuẩn bị/triển khai dự án
+2. Opportunity Lost – Mất cơ hội	Khách hàng từ chối proposal, chọn nhà cung cấp khác hoặc hai bên không đạt được thỏa thuận
+3. Opportunity Rejected – Công ty từ chối cơ hội	Công ty đánh giá cơ hội không phù hợp về năng lực, nguồn lực, lợi nhuận hoặc mức độ rủi ro
+4. Customer Withdrawn – Khách hàng rút yêu cầu	Khách hàng hủy hoặc không còn nhu cầu thực hiện dự án
+5. Opportunity On Hold – Tạm hoãn	Khách hàng chưa triển khai tại thời điểm hiện tại; cơ hội được giữ lại để tiếp tục sau
+6. Negotiation Failed – Đàm phán không thành công	Hai bên không thống nhất được giá, phạm vi, tiến độ hoặc điều khoản hợp đồng
+
