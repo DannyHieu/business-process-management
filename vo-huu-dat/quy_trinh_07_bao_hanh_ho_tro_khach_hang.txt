@@ -1,0 +1,37 @@
+QUY TRÌNH BẢO HÀNH VÀ HỖ TRỢ KHÁCH HÀNG (SUPPORT & MAINTENANCE)
+----------------------------------------------------------------
+
+1. MỤC TIÊU:
+- Tiếp nhận và xử lý nhanh chóng các lỗi/sự cố (Incidents) và yêu cầu hỗ trợ (Service Requests) từ khách hàng sau khi bàn giao sản phẩm.
+- Đảm bảo hệ thống hoạt động ổn định liên tục theo đúng cam kết chất lượng dịch vụ (SLA - Service Level Agreement).
+- Nâng cao trải nghiệm và sự tin cậy của khách hàng đối với dịch vụ của FPT Software.
+
+2. PHẠM VI:
+Áp dụng cho tất cả sản phẩm phần mềm đã bàn giao và đang trong giai đoạn bảo hành hoặc bảo trì định kỳ theo hợp đồng dịch vụ đã ký.
+
+3. CÁC BÊN LIÊN QUAN & VAI TRÒ (RACIS):
+- Client / Customer: Người phát hiện sự cố và gửi yêu cầu hỗ trợ (ticket).
+- L1 Support (Helpdesk): Tiếp nhận ticket, phân loại, giải đáp các nghiệp vụ cơ bản dựa trên Knowledge Base.
+- L2 Support (Technical Support): Điều tra log, database, xử lý các sự cố nghiệp vụ phức tạp hơn.
+- L3 Support (Dev Team / Architect): Thay đổi source code, vá lỗi hệ thống lớn hoặc xử lý lỗ hổng bảo mật nghiêm trọng.
+- Service Delivery Manager (SDM): Giám sát cam kết SLA, làm việc trực tiếp với khách hàng và báo cáo định kỳ.
+
+4. CÁC BƯỚC THỰC HIỆN CHI TIẾT (AS-IS):
+- Bước 1: Khách hàng gặp sự cố, tạo ticket trên Portal (Jira Service Desk / Zendesk) hoặc qua hotline/email.
+- Bước 2: L1 tiếp nhận ticket, kiểm tra tính hợp lệ và phân loại mức độ ưu tiên (Severity: Critical, Major, Minor).
+- Bước 3: L1 phản hồi ban đầu cho khách hàng trong khung thời gian quy định của SLA (ví dụ: < 15 phút với lỗi Critical).
+- Bước 4: L1 xử lý lỗi cơ bản.
+  * Nếu giải quyết được: Trả lời giải pháp cho khách hàng -> Chuyển sang Bước 8.
+  * Nếu không giải quyết được: Chuyển ticket (Escalate) sang đội L2/L3.
+- Bước 5: Đội kỹ thuật L2/L3 phân tích logs, reproduce lỗi trên môi trường staging và viết mã sửa lỗi (Hotfix / Patch).
+- Bước 6: Đội QC thực hiện kiểm thử bản vá trên môi trường Staging/UAT để đảm bảo không phát sinh lỗi mới.
+- Bước 7: DevOps deploy bản vá lên Production và kiểm tra tính ổn định của hệ thống.
+- Bước 8: Gửi thông báo cho khách hàng kiểm nghiệm và xác nhận kết quả xử lý.
+- Bước 9: Khách hàng xác nhận đạt yêu cầu -> Đóng ticket (Status: Closed).
+- Bước 10: IT Support cập nhật nguyên nhân và giải pháp xử lý vào kho tri thức nội bộ (Knowledge Base).
+
+5. CHỈ SỐ ĐO LƯỜNG (KPIs):
+- Thời gian phản hồi đầu tiên (First Response Time - FRT).
+- Thời gian trung bình giải quyết sự cố (Mean Time to Resolution - MTTR).
+- Tỷ lệ tuân thủ cam kết SLA của các ticket (SLA Compliance Rate).
+- Điểm đánh giá mức độ hài lòng của khách hàng (CSAT).
