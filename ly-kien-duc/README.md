@@ -26,7 +26,8 @@
 
 ## Khó khăn khi thực hiện:
 - Task: Tìm hiểu lý do chọn đề tài "Công ty FPT Software" - Trích dẫn nguồn tham khảo
-	---> <a href="https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0">https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0</a>
+
+  ---> <a href="https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0">https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0</a>
 
 ## Khó khăn khi thực hiện:
 - Chưa được tiếp xúc quy trình này, nên chưa nắm chi tiết về quy trình nghiệp vụ này.
