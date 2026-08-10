@@ -21,6 +21,12 @@
 - <b>15.07.2026:</b> Tìm hiểu và viết mô tả bằng lời (Phần 1) cho quy trình "Quản lý chất lượng và cải tiến quy trình - FSoft"
 - <b>25.07.2026:</b> Phần 2 - Phân tích và xác định yếu tố cần thiết trong quy trình (dựa trên 4 câu hỏi)
 - <b>30.07.2026:</b> Phần 3 - Mô hình hóa quy trình (Phân tích và Thiết kế BPMN)
+- <b>10.08.2026:</b> Task - Tìm hiểu lý do chọn đề tài "Công ty FPT Software" - Trích dẫn nguồn tham khảo
+
+
+## Khó khăn khi thực hiện:
+- Task: Tìm hiểu lý do chọn đề tài "Công ty FPT Software" - Trích dẫn nguồn tham khảo
+	---> <a href="https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0">https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0</a>
 
 ## Khó khăn khi thực hiện:
 - Chưa được tiếp xúc quy trình này, nên chưa nắm chi tiết về quy trình nghiệp vụ này.
