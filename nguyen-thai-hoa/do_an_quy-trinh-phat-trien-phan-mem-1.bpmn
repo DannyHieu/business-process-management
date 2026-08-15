@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1k3xauz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="3c8fe65" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1k3xauz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.24.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
   <bpmn:collaboration id="Collaboration_11g69kd">
     <bpmn:participant id="Participant_0eybxkz" name="Công ty phần mềm" processRef="Process_0ab3vy1" />
     <bpmn:participant id="Participant_1iscb2e" name="Khách hàng" processRef="Process_15tel86" />
@@ -133,7 +133,7 @@
     <bpmn:sequenceFlow id="Flow_15sg7h9" sourceRef="Event_1pz6yr8" targetRef="Activity_1o6r9u3" />
     <bpmn:sequenceFlow id="Flow_04zxks4" sourceRef="Activity_1sl57ff" targetRef="Event_1pz6yr8" />
     <bpmn:sequenceFlow id="Flow_0yzm2xf" sourceRef="Activity_07hrsbs" targetRef="Event_1624v0f" />
-    <bpmn:intermediateCatchEvent id="Event_1624v0f" name="Nhận hợp đồng">
+    <bpmn:intermediateCatchEvent id="Event_1624v0f" name="Hợp đồng được nhận">
       <bpmn:incoming>Flow_0yzm2xf</bpmn:incoming>
       <bpmn:outgoing>Flow_0k12f18</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_028oi9z" />
@@ -142,7 +142,7 @@
     <bpmn:sequenceFlow id="Flow_1o4pfdd" sourceRef="Event_0k3e919" targetRef="Activity_1fzcqo6" />
     <bpmn:sequenceFlow id="Flow_0c8h55b" sourceRef="Event_1bwfnjz" targetRef="Activity_1bei3tk" />
     <bpmn:sequenceFlow id="Flow_19f3x9h" sourceRef="Activity_135usgz" targetRef="Event_1o1tuwp" />
-    <bpmn:intermediateCatchEvent id="Event_1bwfnjz" name="Nhận sign-off UAT">
+    <bpmn:intermediateCatchEvent id="Event_1bwfnjz" name="UAT được sign-off">
       <bpmn:incoming>Flow_037esfg</bpmn:incoming>
       <bpmn:outgoing>Flow_0c8h55b</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_195w5k9" />
@@ -173,7 +173,7 @@
       <bpmn:incoming>Flow_09wr4m0</bpmn:incoming>
       <bpmn:outgoing>Flow_0aulepo</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:intermediateCatchEvent id="Event_1pz6yr8" name="Nhận tài liệu đã duyệt">
+    <bpmn:intermediateCatchEvent id="Event_1pz6yr8" name="Tài liệu được duyệt">
       <bpmn:incoming>Flow_04zxks4</bpmn:incoming>
       <bpmn:outgoing>Flow_15sg7h9</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1l2g7u1" />
@@ -214,7 +214,7 @@
       <bpmn:outgoing>Flow_0qnr69x</bpmn:outgoing>
       <bpmn:outgoing>Flow_1o1c9tp</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:intermediateCatchEvent id="Event_0k3e919" name="Nhận thông báo lỗi UAT">
+    <bpmn:intermediateCatchEvent id="Event_0k3e919" name="UAT có lỗi">
       <bpmn:incoming>Flow_0v1nfya</bpmn:incoming>
       <bpmn:outgoing>Flow_1o4pfdd</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0j0p3cj" />
@@ -252,7 +252,7 @@
       <bpmn:outgoing>Flow_0u2cr72</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="Flow_1vjvwas" sourceRef="Event_16xko8d" targetRef="Activity_0a34bw5" />
-    <bpmn:intermediateCatchEvent id="Event_16xko8d" name="Nhận yêu cầu">
+    <bpmn:intermediateCatchEvent id="Event_16xko8d" name="Yêu cầu chi tiết được cung cấp">
       <bpmn:incoming>Flow_1j8lvfl</bpmn:incoming>
       <bpmn:outgoing>Flow_1vjvwas</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_07uv61d" />
@@ -262,7 +262,7 @@
       <bpmn:outgoing>Flow_16a0k5r</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="Flow_1ic0z9s" sourceRef="Event_1o1tuwp" targetRef="Event_0tedllj" />
-    <bpmn:intermediateCatchEvent id="Event_1o1tuwp" name="Chờ xác nhận thanh toán">
+    <bpmn:intermediateCatchEvent id="Event_1o1tuwp" name="Thanh toán được thành công">
       <bpmn:incoming>Flow_19f3x9h</bpmn:incoming>
       <bpmn:outgoing>Flow_1ic0z9s</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_01eb99m" />
@@ -328,7 +328,7 @@
       <bpmn:incoming>Flow_1jbsi0f</bpmn:incoming>
       <bpmn:outgoing>Flow_00zba0m</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:intermediateCatchEvent id="Event_0kw93xg" name="Nhận tài liệu để duyệt">
+    <bpmn:intermediateCatchEvent id="Event_0kw93xg" name="Tại liệu được nhận">
       <bpmn:incoming>Flow_041m4ef</bpmn:incoming>
       <bpmn:outgoing>Flow_1q2bpta</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_130hm4t" />
@@ -349,7 +349,7 @@
       <bpmn:outgoing>Flow_0yi2zok</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="Flow_0814yqs" sourceRef="Event_0zxu13z" targetRef="Activity_1mquvxs" />
-    <bpmn:intermediateCatchEvent id="Event_0zxu13z" name="Nhận thông báo đã triển khải lên UAT">
+    <bpmn:intermediateCatchEvent id="Event_0zxu13z" name="Sản phẩm được triển khai lên UAT">
       <bpmn:incoming>Flow_0713q34</bpmn:incoming>
       <bpmn:incoming>Flow_0yi2zok</bpmn:incoming>
       <bpmn:outgoing>Flow_0814yqs</bpmn:outgoing>
@@ -368,7 +368,7 @@
       <bpmn:incoming>Flow_0rsmodh</bpmn:incoming>
       <bpmn:outgoing>Flow_03c9t23</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:intermediateCatchEvent id="Event_0zvn0vv" name="Nhận yêu cầu nghiệm thu">
+    <bpmn:intermediateCatchEvent id="Event_0zvn0vv" name="Yêu cầu nghiệm thu được chuyển tới">
       <bpmn:incoming>Flow_04eb2fh</bpmn:incoming>
       <bpmn:outgoing>Flow_1knh36s</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_01x65m3" />
@@ -443,7 +443,7 @@
       <bpmndi:BPMNShape id="BPMNShape_02l8f4i" bpmnElement="Event_1624v0f">
         <dc:Bounds x="1212" y="547" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1191" y="593" width="77" height="14" />
+          <dc:Bounds x="1175" y="586" width="130" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_0siwt5q" bpmnElement="Event_1bwfnjz">
@@ -479,7 +479,7 @@
       <bpmndi:BPMNShape id="Event_1pz6yr8_di" bpmnElement="Event_1pz6yr8">
         <dc:Bounds x="2422" y="692" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2402" y="735" width="77" height="27" />
+          <dc:Bounds x="2409" y="735" width="65" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1rmkh0n_di" bpmnElement="Activity_1rmkh0n">
@@ -514,7 +514,7 @@
       <bpmndi:BPMNShape id="BPMNShape_0xbmn40" bpmnElement="Event_0k3e919">
         <dc:Bounds x="4522" y="682" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="4570" y="686" width="79" height="27" />
+          <dc:Bounds x="4565" y="693" width="50" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1fzcqo6_di" bpmnElement="Activity_1fzcqo6">
@@ -546,7 +546,7 @@
       <bpmndi:BPMNShape id="Event_16xko8d_di" bpmnElement="Event_16xko8d">
         <dc:Bounds x="1832" y="832" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1816" y="875" width="68" height="14" />
+          <dc:Bounds x="1812" y="875" width="76" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0a34bw5_di" bpmnElement="Activity_0a34bw5">
@@ -556,7 +556,7 @@
       <bpmndi:BPMNShape id="BPMNShape_00n35gp" bpmnElement="Event_1o1tuwp">
         <dc:Bounds x="5352" y="682" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="5335" y="727.5" width="69" height="27" />
+          <dc:Bounds x="5327" y="728" width="85" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0tedllj_di" bpmnElement="Event_0tedllj">
@@ -650,7 +650,7 @@
         <di:waypoint x="3660" y="1200" />
         <di:waypoint x="3795" y="1200" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="3724" y="1188" width="90" height="14" />
+          <dc:Bounds x="3695" y="1183" width="90" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_00uhofu_di" bpmnElement="Flow_00uhofu">
@@ -815,7 +815,7 @@
       <bpmndi:BPMNShape id="BPMNShape_1ow2clz" bpmnElement="Event_0kw93xg">
         <dc:Bounds x="2112" y="362" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2032" y="393" width="77" height="27" />
+          <dc:Bounds x="2038" y="393" width="65" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0yy324n_di" bpmnElement="Activity_0yy324n">
@@ -837,7 +837,7 @@
       <bpmndi:BPMNShape id="BPMNShape_0jcjecy" bpmnElement="Event_0zxu13z">
         <dc:Bounds x="4082" y="332" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="4001" y="363" width="79" height="40" />
+          <dc:Bounds x="3997" y="363" width="87" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_05swj7b_di" bpmnElement="Activity_05swj7b">
@@ -851,7 +851,7 @@
       <bpmndi:BPMNShape id="BPMNShape_1tdlac0" bpmnElement="Event_0zvn0vv">
         <dc:Bounds x="5072" y="222" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="5006" y="349" width="68" height="27" />
+          <dc:Bounds x="4988" y="256" width="84" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1j7nxa6_di" bpmnElement="Activity_1j7nxa6">

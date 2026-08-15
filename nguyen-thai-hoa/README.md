@@ -1,6 +1,6 @@
 # Nguyễn Thái Hòa - Tiến độ
 
-![Mô hình hóa quy trình phát triển phần mềm](./QuyTrinhPhatTrienPhanMem.png)
+![Mô hình hóa quy trình phát triển phần mềm](./do_an_quy-trinh-phat-trien-phan-mem-1.svg)
 
 ## 26 - Jul 2026
 
