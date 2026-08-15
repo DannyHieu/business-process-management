@@ -28,4 +28,6 @@
 
 ## 15 Aug 2026
 
+- Review lại nội dung Rubik 1, Rubik 2, Rubik 3
+- Chỉnh sửa mô hình trong Rubik 2
 - Bản nháp cho Rubik 4: https://docs.google.com/document/d/1Ds3OoV2yS128-fhdYLexw83D3hvbzvLG/edit?usp=sharing&ouid=105859768960007253819&rtpof=true&sd=true
