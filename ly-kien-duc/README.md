@@ -18,9 +18,17 @@
 <a href="https://uithcm-my.sharepoint.com/:w:/g/personal/25410189_ms_uit_edu_vn/IQDvaeScNB4jQ7nkj-I0GJSxAaabrKWnsAmwVno3mOOkmVI?e=B76DIX">https://uithcm-my.sharepoint.com/:w:/g/personal/25410189_ms_uit_edu_vn/IQDvaeScNB4jQ7nkj-I0GJSxAaabrKWnsAmwVno3mOOkmVI?e=B76DIX</a>
 
 ## Tiến độ thực hiện:
-- <b>15.07.2026:</b> Tìm hiểu và viết mô tả bằng lời (Phần 1) cho quy trình "Quản lý chất lượng và cải tiến quy trình - FSoft"
-- <b>25.07.2026:</b> Phần 2 - Phân tích và xác định yếu tố cần thiết trong quy trình (dựa trên 4 câu hỏi)
-- <b>30.07.2026:</b> Phần 3 - Mô hình hóa quy trình (Phân tích và Thiết kế BPMN)
+- <b>15.07.2026:</b> Phần 1A - Tìm hiểu và viết mô tả bằng lời cho quy trình "Quản lý chất lượng và cải tiến quy trình - FSoft"
+- <b>25.07.2026:</b> Phần 1B - Phân tích và xác định yếu tố cần thiết trong quy trình (dựa trên 4 câu hỏi)
+- <b>30.07.2026:</b> Phần 2 - Mô hình hóa quy trình (Phân tích và Thiết kế BPMN)
+- <b>10.08.2026:</b> Task - Tìm hiểu lý do chọn đề tài "Công ty FPT Software" - Trích dẫn nguồn tham khảo
+- <b>10.08.2026:</b> Phần 3 - Phương pháp thực hiện (Dựa trên bằng chứng)
+
+
+## Khó khăn khi thực hiện:
+- Task: Tìm hiểu lý do chọn đề tài "Công ty FPT Software" - Trích dẫn nguồn tham khảo
+
+  ---> <a href="https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0">https://docs.google.com/document/d/1e_txtBy6M4DKooImb5dv8iaTxa0d6ZzrtiJ23opbHQU/edit?tab=t.0</a>
 
 ## Khó khăn khi thực hiện:
 - Chưa được tiếp xúc quy trình này, nên chưa nắm chi tiết về quy trình nghiệp vụ này.

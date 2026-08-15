@@ -1,0 +1,39 @@
+QUY TRÌNH MUA SẮM VÀ QUẢN LÝ TÀI SẢN CNTT (IT PROCUREMENT & ASSET MANAGEMENT)
+--------------------------------------------------------------------------------
+
+1. MỤC TIÊU:
+- Cung cấp đầy đủ, kịp thời trang thiết bị phần cứng, phần mềm, Cloud cho nhân sự và dự án.
+- Tối ưu hóa chi phí mua sắm và tối đa hóa việc tái sử dụng thiết bị trong kho.
+- Kiểm soát toàn diện vòng đời tài sản và đảm bảo tính tuân thủ bản quyền phần mềm.
+
+2. PHẠM VI:
+Áp dụng từ khi phát sinh nhu cầu trang thiết bị cho đến khi mua sắm, bàn giao, kiểm kê định kỳ, sửa chữa và thanh lý tài sản.
+
+3. CÁC BÊN LIÊN QUAN & VAI TRÒ (RACIS):
+- Requester (Nhân viên / PM): Người tạo yêu cầu cấp phát/mua sắm.
+- Line Manager / Dept Head: Phê duyệt tính hợp lý của yêu cầu.
+- IT Asset Officer / IT Admin: Đánh giá kỹ thuật, kiểm kho, cài đặt chuẩn bảo mật và quản lý Asset Register (Snipe-IT/CMDB).
+- Procurement Dept: Khảo giá nhà cung cấp (Vendor), làm hợp đồng và phát hành PO.
+- Finance & Accounting: Phê duyệt ngân sách theo Cost Center, thanh toán cho Vendor và ghi nhận khấu hao.
+- Vendor (Nhà cung cấp): Bàn giao thiết bị và hỗ trợ bảo hành.
+
+4. CÁC BƯỚC THỰC HIỆN CHI TIẾT (AS-IS):
+- Bước 1: Requester tạo ticket yêu cầu trên hệ thống Jira Service Management.
+- Bước 2: Line Manager duyệt yêu cầu.
+- Bước 3: IT Asset Officer kiểm tra kho.
+  * Nếu CÒN máy: IT cài đặt OS và phần mềm tiêu chuẩn -> Bàn giao trực tiếp (ký Biên bản bàn giao) -> Cập nhật trạng thái trên Snipe-IT.
+  * Nếu HẾT máy hoặc yêu cầu đặc thù: Chuyển yêu cầu sang bộ phận Mua sắm (PR - Purchase Request).
+- Bước 4: Finance phê duyệt ngân sách PR.
+- Bước 5: Procurement lấy 3 báo giá từ các Vendor, so sánh lựa chọn nhà cung cấp tối ưu nhất.
+- Bước 6: Procurement phát hành PO (Purchase Order) và ký hợp đồng.
+- Bước 7: Vendor giao hàng đến kho. Thủ kho nhận hàng, IT kiểm định cấu hình kỹ thuật thực tế so với PO.
+- Bước 8: IT gắn mã tài sản (Asset Tag), khai báo thông tin lên Snipe-IT/CMDB.
+- Bước 9: IT bàn giao máy cho Requester, hai bên ký Biên bản bàn giao tài sản.
+- Bước 10: Theo dõi, bảo trì, kiểm kê tài sản định kỳ hàng năm.
+- Bước 11: Thanh lý tài sản (đã hết khấu hao/hỏng nặng): IT thu hồi -> Xóa sạch dữ liệu bảo mật -> Ký biên bản thanh lý và cập nhật trạng thái CMDB.
+
+5. CHỈ SỐ ĐO LƯỜNG (KPIs):
+- Lead Time từ lúc yêu cầu đến lúc nhận máy.
+- Tỷ lệ tồn kho thiết bị (Inventory Rate).
+- Mức độ hài lòng của nhân viên (CSAT).
+- Tỷ lệ tuân thủ bản quyền phần mềm (100% License).
