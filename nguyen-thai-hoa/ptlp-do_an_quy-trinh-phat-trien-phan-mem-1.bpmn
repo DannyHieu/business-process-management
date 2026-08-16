@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1k3xauz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.24.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1k3xauz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.24.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
   <bpmn:collaboration id="Collaboration_11g69kd">
     <bpmn:participant id="Participant_0eybxkz" name="Công ty phần mềm" processRef="Process_0ab3vy1" />
     <bpmn:participant id="Participant_1iscb2e" name="Khách hàng" processRef="Process_15tel86" />
@@ -16,6 +16,33 @@
     <bpmn:messageFlow id="Flow_0awibv7" name="Yêu cầu cung cấp đặc tả phần mềm" sourceRef="Activity_1ialbek" targetRef="Activity_05swj7b" />
     <bpmn:messageFlow id="Flow_17lrdhk" name="Đặc tả phần mềm" sourceRef="Activity_05swj7b" targetRef="Event_16xko8d" />
     <bpmn:messageFlow id="Flow_036mx8s" sourceRef="Activity_0b3hjkp" targetRef="Event_1o1tuwp" />
+    <bpmn:textAnnotation id="TextAnnotation_0lglo7m">
+      <bpmn:text>MOVE - Việc giao tiếp qua lại bằng file rời (Word/Excel) hoặc email khiến thông tin bị phân mảnh, dễ hiểu sai ý nhau.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0j03ay4" associationDirection="None" sourceRef="Flow_0awibv7" targetRef="TextAnnotation_0lglo7m" />
+    <bpmn:association id="Association_1d7gvzw" associationDirection="None" sourceRef="TextAnnotation_0lglo7m" targetRef="Flow_1ol8swc" />
+    <bpmn:association id="Association_064o5ya" associationDirection="None" sourceRef="TextAnnotation_0lglo7m" targetRef="Flow_17lrdhk" />
+    <bpmn:textAnnotation id="TextAnnotation_1kkx23m">
+      <bpmn:text>MOVE - Ghi nhận lỗi thiếu thông tin (thiếu hình ảnh, không rõ môi trường), dẫn đến việc Dev phải tốn thời gian trao đổi lại với QA/PM/Client để tìm cách tái hiện lỗi.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1riid7t" associationDirection="None" sourceRef="Flow_1w210eo" targetRef="TextAnnotation_1kkx23m" />
+    <bpmn:association id="Association_0w7qt3g" associationDirection="None" sourceRef="TextAnnotation_1kkx23m" targetRef="Flow_1o4pfdd" />
+    <bpmn:textAnnotation id="TextAnnotation_1oo0ff1">
+      <bpmn:text>HOLD - Dự án bị tạm dừng do khách hàng bận công việc kinh doanh, chậm trễ trong việc xếp lịch dùng thử phần mềm.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1n27886" associationDirection="None" sourceRef="Gateway_1m0403q" targetRef="TextAnnotation_1oo0ff1" />
+    <bpmn:textAnnotation id="TextAnnotation_03kvetb">
+      <bpmn:text>HOLD - Quy trình hành chính, kế toán từ phía khách hàng rườm rà; hồ sơ bàn giao bị trả về do sai sót biểu mẫu.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0g9nn3q" associationDirection="None" sourceRef="Event_1o1tuwp" targetRef="TextAnnotation_03kvetb" />
+    <bpmn:textAnnotation id="TextAnnotation_1eko0hu">
+      <bpmn:text>OVERDO - Áp dụng luồng quy trình quá cứng nhắc. PM dừng dự án để làm báo giá chỉ vì khách muốn đổi màu một nút bấm hoặc sửa vài dòng chữ.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1thi7jf" associationDirection="None" sourceRef="Activity_15u3gle" targetRef="TextAnnotation_1eko0hu" />
+    <bpmn:textAnnotation id="TextAnnotation_0kq8565">
+      <bpmn:text>OVERDO - Viết test case tĩnh quá chi tiết trong khi giao diện/yêu cầu phần mềm chưa được chốt cứng, dẫn đến việc phải vứt bỏ hoặc viết lại toàn bộ kịch bản.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_02bw3i8" associationDirection="None" sourceRef="Activity_1rmkh0n" targetRef="TextAnnotation_0kq8565" />
   </bpmn:collaboration>
   <bpmn:process id="Process_0ab3vy1" isExecutable="false">
     <bpmn:laneSet id="LaneSet_0j66ygl">
@@ -37,12 +64,12 @@
         <bpmn:flowNodeRef>Activity_1rl3xqx</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1iyujq9" name="Business Analysis">
-        <bpmn:flowNodeRef>Activity_19cegf2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1ialbek</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1sl57ff</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_16xko8d</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0a34bw5</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1bei3tk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_19cegf2</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0ob0ecw" name="Project Manager">
         <bpmn:flowNodeRef>Activity_1eaduw3</bpmn:flowNodeRef>
@@ -152,10 +179,6 @@
     <bpmn:task id="Activity_0gpa0mn" name="Đánh giá tính khả thi và estimate">
       <bpmn:incoming>Flow_1gy2oa4</bpmn:incoming>
       <bpmn:outgoing>Flow_06a8ii5</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Activity_19cegf2" name="Phân tích yêu cầu sơ bộ">
-      <bpmn:incoming>Flow_0kpskzt</bpmn:incoming>
-      <bpmn:outgoing>Flow_1u066qp</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="Activity_1ialbek" name="Lấy yêu cầu chi tiết">
       <bpmn:incoming>Flow_0k12f18</bpmn:incoming>
@@ -273,6 +296,10 @@
     <bpmn:task id="Activity_1bei3tk" name="Triển khai lên môi trường production">
       <bpmn:incoming>Flow_0c8h55b</bpmn:incoming>
       <bpmn:outgoing>Flow_18k7ane</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_19cegf2" name="Phân tích yêu cầu sơ bộ">
+      <bpmn:incoming>Flow_0kpskzt</bpmn:incoming>
+      <bpmn:outgoing>Flow_1u066qp</bpmn:outgoing>
     </bpmn:task>
   </bpmn:process>
   <bpmn:process id="Process_15tel86" isExecutable="false">
@@ -456,10 +483,6 @@
         <dc:Bounds x="680" y="980" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_19cegf2_di" bpmnElement="Activity_19cegf2">
-        <dc:Bounds x="690" y="800" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1ialbek_di" bpmnElement="Activity_1ialbek">
         <dc:Bounds x="1560" y="810" width="100" height="80" />
         <bpmndi:BPMNLabel />
@@ -566,6 +589,10 @@
         <dc:Bounds x="4940" y="830" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19cegf2_di" bpmnElement="Activity_19cegf2">
+        <dc:Bounds x="690" y="810" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_032ryrd_di" bpmnElement="Flow_032ryrd">
         <di:waypoint x="408" y="560" />
         <di:waypoint x="440" y="560" />
@@ -573,10 +600,10 @@
       <bpmndi:BPMNEdge id="Flow_0kpskzt_di" bpmnElement="Flow_0kpskzt">
         <di:waypoint x="645" y="560" />
         <di:waypoint x="740" y="560" />
-        <di:waypoint x="740" y="800" />
+        <di:waypoint x="740" y="810" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1u066qp_di" bpmnElement="Flow_1u066qp">
-        <di:waypoint x="790" y="810" />
+        <di:waypoint x="790" y="820" />
         <di:waypoint x="790" y="565" />
         <di:waypoint x="835" y="565" />
       </bpmndi:BPMNEdge>
@@ -972,6 +999,43 @@
         <di:waypoint x="5420" y="240" />
         <di:waypoint x="5482" y="240" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0j03ay4_di" bpmnElement="Association_0j03ay4">
+        <di:waypoint x="1655" y="555" />
+        <di:waypoint x="1920" y="643" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1d7gvzw_di" bpmnElement="Association_1d7gvzw">
+        <di:waypoint x="1927" y="640" />
+        <di:waypoint x="1860" y="542" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_064o5ya_di" bpmnElement="Association_064o5ya">
+        <di:waypoint x="1920" y="684" />
+        <di:waypoint x="1780" y="629" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1riid7t_di" bpmnElement="Association_1riid7t">
+        <di:waypoint x="3990" y="1075" />
+        <di:waypoint x="4151" y="1140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0w7qt3g_di" bpmnElement="Association_0w7qt3g">
+        <di:waypoint x="4344" y="1153" />
+        <di:waypoint x="4640" y="1040" />
+        <di:waypoint x="4540" y="860" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1n27886_di" bpmnElement="Association_1n27886">
+        <di:waypoint x="4490" y="525" />
+        <di:waypoint x="4572" y="412" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0g9nn3q_di" bpmnElement="Association_0g9nn3q">
+        <di:waypoint x="5376" y="683" />
+        <di:waypoint x="5411" y="590" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1thi7jf_di" bpmnElement="Association_1thi7jf">
+        <di:waypoint x="4460" y="707" />
+        <di:waypoint x="4570" y="723" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_02bw3i8_di" bpmnElement="Association_02bw3i8">
+        <di:waypoint x="2990" y="1225" />
+        <di:waypoint x="3020" y="1240" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1q6g9ly_di" bpmnElement="Flow_1q6g9ly">
         <di:waypoint x="390" y="250" />
         <di:waypoint x="390" y="542" />
@@ -1057,6 +1121,30 @@
         <di:waypoint x="5370" y="280" />
         <di:waypoint x="5370" y="682" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="TextAnnotation_0lglo7m_di" bpmnElement="TextAnnotation_0lglo7m" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="1920" y="640" width="171" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1kkx23m_di" bpmnElement="TextAnnotation_1kkx23m" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="4150" y="1140" width="193.63385598141696" height="115" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1oo0ff1_di" bpmnElement="TextAnnotation_1oo0ff1" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="4560" y="340" width="260" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_03kvetb_di" bpmnElement="TextAnnotation_03kvetb" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="5390" y="490" width="140" height="100" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1eko0hu_di" bpmnElement="TextAnnotation_1eko0hu" bioc:stroke="#5b176d" bioc:fill="#e1bee7" color:background-color="#e1bee7" color:border-color="#5b176d">
+        <dc:Bounds x="4570" y="710" width="270" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0kq8565_di" bpmnElement="TextAnnotation_0kq8565" bioc:stroke="#5b176d" bioc:fill="#e1bee7" color:background-color="#e1bee7" color:border-color="#5b176d">
+        <dc:Bounds x="3010" y="1240" width="250" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
