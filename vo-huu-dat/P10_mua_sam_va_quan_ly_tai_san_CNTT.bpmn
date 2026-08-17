@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_P10" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Codex" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_P10">
+    <bpmn:participant id="Participant_P10_Company" name="Cong ty phan mem" processRef="Process_P10" />
+    <bpmn:participant id="Participant_P10_Vendor" name="Vendor" processRef="Process_P10_Vendor" />
+    <bpmn:messageFlow id="Message_P10_PO" sourceRef="Task_P10_IssuePO" targetRef="Task_Vendor_ReceivePO" name="PO / hop dong mua sam" />
+    <bpmn:messageFlow id="Message_P10_Delivery" sourceRef="Task_Vendor_Deliver" targetRef="Task_P10_InspectGoods" name="Thiet bi duoc giao" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_P10" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_Process_P10">
+      <bpmn:lane id="Lane_Requester" name="Requester / PM">
+        <bpmn:flowNodeRef>Start_P10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_P10_CreateRequest</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Manager" name="Line Manager">
+        <bpmn:flowNodeRef>Task_P10_ApproveNeed</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_IT" name="IT Asset Officer / IT Admin">
+        <bpmn:flowNodeRef>Task_P10_CheckInventory</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_P10_InStock</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_P10_PrepareAsset</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_P10_RegisterAsset</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_P10_Maintain</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_P10_Dispose</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_P10_Disposal</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_P10</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Finance" name="Finance - Accounting">
+        <bpmn:flowNodeRef>Task_P10_BudgetApproval</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Proc" name="Procurement">
+        <bpmn:flowNodeRef>Task_P10_GetQuotes</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_P10_IssuePO</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Warehouse" name="Warehouse / IT Support">
+        <bpmn:flowNodeRef>Task_P10_InspectGoods</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_P10_Handover</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_P10">
+      <bpmn:outgoing>Flow_P10_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Task_P10_CreateRequest" name="Tao ticket yeu cau cap phat / mua sam">
+      <bpmn:incoming>Flow_P10_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_ApproveNeed" name="Phe duyet nhu cau">
+      <bpmn:incoming>Flow_P10_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_CheckInventory" name="Kiem tra ton kho va cau hinh chuan">
+      <bpmn:incoming>Flow_P10_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_P10_InStock" name="Con tai san phu hop?">
+      <bpmn:incoming>Flow_P10_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_5</bpmn:outgoing>
+      <bpmn:outgoing>Flow_P10_6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Task_P10_PrepareAsset" name="Cai dat OS, phan mem va chinh sach bao mat">
+      <bpmn:incoming>Flow_P10_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_11</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_BudgetApproval" name="Phe duyet ngan sach PR">
+      <bpmn:incoming>Flow_P10_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_GetQuotes" name="Lay 3 bao gia va de xuat vendor">
+      <bpmn:incoming>Flow_P10_7</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_IssuePO" name="Phat hanh PO / ky hop dong">
+      <bpmn:incoming>Flow_P10_8</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_9</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_InspectGoods" name="Nhan hang, kiem dinh cau hinh">
+      <bpmn:incoming>Flow_P10_9</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_10</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_RegisterAsset" name="Dan Asset Tag va cap nhat Snipe-IT/CMDB">
+      <bpmn:incoming>Flow_P10_10</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_12</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_Handover" name="Ban giao tai san va ky bien ban">
+      <bpmn:incoming>Flow_P10_11</bpmn:incoming>
+      <bpmn:incoming>Flow_P10_12</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_13</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_P10_Maintain" name="Theo doi su dung, bao tri va kiem ke dinh ky">
+      <bpmn:incoming>Flow_P10_13</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_14</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_P10_Dispose" name="Tai san het khau hao / hong nang?">
+      <bpmn:incoming>Flow_P10_14</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_15</bpmn:outgoing>
+      <bpmn:outgoing>Flow_P10_16</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Task_P10_Disposal" name="Thu hoi, xoa du lieu va thanh ly">
+      <bpmn:incoming>Flow_P10_15</bpmn:incoming>
+      <bpmn:outgoing>Flow_P10_17</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="End_P10">
+      <bpmn:incoming>Flow_P10_16</bpmn:incoming>
+      <bpmn:incoming>Flow_P10_17</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_P10_1" sourceRef="Start_P10" targetRef="Task_P10_CreateRequest" />
+    <bpmn:sequenceFlow id="Flow_P10_2" sourceRef="Task_P10_CreateRequest" targetRef="Task_P10_ApproveNeed" />
+    <bpmn:sequenceFlow id="Flow_P10_3" sourceRef="Task_P10_ApproveNeed" targetRef="Task_P10_CheckInventory" />
+    <bpmn:sequenceFlow id="Flow_P10_4" sourceRef="Task_P10_CheckInventory" targetRef="Gateway_P10_InStock" />
+    <bpmn:sequenceFlow id="Flow_P10_5" sourceRef="Gateway_P10_InStock" targetRef="Task_P10_PrepareAsset" name="Co" />
+    <bpmn:sequenceFlow id="Flow_P10_6" sourceRef="Gateway_P10_InStock" targetRef="Task_P10_BudgetApproval" name="Khong" />
+    <bpmn:sequenceFlow id="Flow_P10_7" sourceRef="Task_P10_BudgetApproval" targetRef="Task_P10_GetQuotes" />
+    <bpmn:sequenceFlow id="Flow_P10_8" sourceRef="Task_P10_GetQuotes" targetRef="Task_P10_IssuePO" />
+    <bpmn:sequenceFlow id="Flow_P10_9" sourceRef="Task_P10_IssuePO" targetRef="Task_P10_InspectGoods" />
+    <bpmn:sequenceFlow id="Flow_P10_10" sourceRef="Task_P10_InspectGoods" targetRef="Task_P10_RegisterAsset" />
+    <bpmn:sequenceFlow id="Flow_P10_11" sourceRef="Task_P10_PrepareAsset" targetRef="Task_P10_Handover" />
+    <bpmn:sequenceFlow id="Flow_P10_12" sourceRef="Task_P10_RegisterAsset" targetRef="Task_P10_Handover" />
+    <bpmn:sequenceFlow id="Flow_P10_13" sourceRef="Task_P10_Handover" targetRef="Task_P10_Maintain" />
+    <bpmn:sequenceFlow id="Flow_P10_14" sourceRef="Task_P10_Maintain" targetRef="Gateway_P10_Dispose" />
+    <bpmn:sequenceFlow id="Flow_P10_15" sourceRef="Gateway_P10_Dispose" targetRef="Task_P10_Disposal" name="Co" />
+    <bpmn:sequenceFlow id="Flow_P10_16" sourceRef="Gateway_P10_Dispose" targetRef="End_P10" name="Khong" />
+    <bpmn:sequenceFlow id="Flow_P10_17" sourceRef="Task_P10_Disposal" targetRef="End_P10" />
+  </bpmn:process>
+  <bpmn:process id="Process_P10_Vendor" isExecutable="false">
+    <bpmn:startEvent id="Start_Vendor">
+      <bpmn:outgoing>Flow_Vendor_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Task_Vendor_ReceivePO" name="Nhan PO va xac nhan don hang">
+      <bpmn:incoming>Flow_Vendor_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_Vendor_2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_Vendor_Deliver" name="Giao thiet bi / tai lieu bao hanh">
+      <bpmn:incoming>Flow_Vendor_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_Vendor_3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="End_Vendor">
+      <bpmn:incoming>Flow_Vendor_3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_Vendor_1" sourceRef="Start_Vendor" targetRef="Task_Vendor_ReceivePO" />
+    <bpmn:sequenceFlow id="Flow_Vendor_2" sourceRef="Task_Vendor_ReceivePO" targetRef="Task_Vendor_Deliver" />
+    <bpmn:sequenceFlow id="Flow_Vendor_3" sourceRef="Task_Vendor_Deliver" targetRef="End_Vendor" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_Process_P10">
+    <bpmndi:BPMNPlane id="Plane_Process_P10" bpmnElement="Collaboration_P10">
+      <bpmndi:BPMNShape id="Participant_P10_Company_di" bpmnElement="Participant_P10_Company" isHorizontal="true">
+        <dc:Bounds x="120" y="80" width="2400" height="900" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_P10_Vendor_di" bpmnElement="Participant_P10_Vendor" isHorizontal="true">
+        <dc:Bounds x="120" y="1060" width="2400" height="180" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Requester_di" bpmnElement="Lane_Requester" isHorizontal="true">
+        <dc:Bounds x="150" y="80" width="2370" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Manager_di" bpmnElement="Lane_Manager" isHorizontal="true">
+        <dc:Bounds x="150" y="230" width="2370" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_IT_di" bpmnElement="Lane_IT" isHorizontal="true">
+        <dc:Bounds x="150" y="380" width="2370" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Finance_di" bpmnElement="Lane_Finance" isHorizontal="true">
+        <dc:Bounds x="150" y="530" width="2370" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Proc_di" bpmnElement="Lane_Proc" isHorizontal="true">
+        <dc:Bounds x="150" y="680" width="2370" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Warehouse_di" bpmnElement="Lane_Warehouse" isHorizontal="true">
+        <dc:Bounds x="150" y="830" width="2370" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start_P10_di" bpmnElement="Start_P10">
+        <dc:Bounds x="240" y="137" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_CreateRequest_di" bpmnElement="Task_P10_CreateRequest">
+        <dc:Bounds x="420" y="120" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_ApproveNeed_di" bpmnElement="Task_P10_ApproveNeed">
+        <dc:Bounds x="600" y="270" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_CheckInventory_di" bpmnElement="Task_P10_CheckInventory">
+        <dc:Bounds x="780" y="420" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_P10_InStock_di" bpmnElement="Gateway_P10_InStock">
+        <dc:Bounds x="960" y="430" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_PrepareAsset_di" bpmnElement="Task_P10_PrepareAsset">
+        <dc:Bounds x="1140" y="420" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_BudgetApproval_di" bpmnElement="Task_P10_BudgetApproval">
+        <dc:Bounds x="1140" y="570" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_GetQuotes_di" bpmnElement="Task_P10_GetQuotes">
+        <dc:Bounds x="1320" y="720" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_IssuePO_di" bpmnElement="Task_P10_IssuePO">
+        <dc:Bounds x="1500" y="720" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_InspectGoods_di" bpmnElement="Task_P10_InspectGoods">
+        <dc:Bounds x="1680" y="870" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_RegisterAsset_di" bpmnElement="Task_P10_RegisterAsset">
+        <dc:Bounds x="1860" y="420" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_Handover_di" bpmnElement="Task_P10_Handover">
+        <dc:Bounds x="2040" y="870" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_Maintain_di" bpmnElement="Task_P10_Maintain">
+        <dc:Bounds x="2220" y="420" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_P10_Dispose_di" bpmnElement="Gateway_P10_Dispose">
+        <dc:Bounds x="2400" y="430" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_P10_Disposal_di" bpmnElement="Task_P10_Disposal">
+        <dc:Bounds x="2580" y="420" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_P10_di" bpmnElement="End_P10">
+        <dc:Bounds x="2760" y="437" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start_Vendor_di" bpmnElement="Start_Vendor">
+        <dc:Bounds x="260" y="1132" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Vendor_ReceivePO_di" bpmnElement="Task_Vendor_ReceivePO">
+        <dc:Bounds x="480" y="1115" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Vendor_Deliver_di" bpmnElement="Task_Vendor_Deliver">
+        <dc:Bounds x="700" y="1115" width="120" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_Vendor_di" bpmnElement="End_Vendor">
+        <dc:Bounds x="920" y="1132" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_P10_1_di" bpmnElement="Flow_P10_1">
+        <di:waypoint x="276" y="155" />
+        <di:waypoint x="420" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_2_di" bpmnElement="Flow_P10_2">
+        <di:waypoint x="540" y="155" />
+        <di:waypoint x="600" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_3_di" bpmnElement="Flow_P10_3">
+        <di:waypoint x="720" y="305" />
+        <di:waypoint x="780" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_4_di" bpmnElement="Flow_P10_4">
+        <di:waypoint x="900" y="455" />
+        <di:waypoint x="960" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_5_di" bpmnElement="Flow_P10_5">
+        <di:waypoint x="1010" y="455" />
+        <di:waypoint x="1140" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_6_di" bpmnElement="Flow_P10_6">
+        <di:waypoint x="1010" y="455" />
+        <di:waypoint x="1140" y="605" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_7_di" bpmnElement="Flow_P10_7">
+        <di:waypoint x="1260" y="605" />
+        <di:waypoint x="1320" y="755" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_8_di" bpmnElement="Flow_P10_8">
+        <di:waypoint x="1440" y="755" />
+        <di:waypoint x="1500" y="755" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_9_di" bpmnElement="Flow_P10_9">
+        <di:waypoint x="1620" y="755" />
+        <di:waypoint x="1680" y="905" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_10_di" bpmnElement="Flow_P10_10">
+        <di:waypoint x="1800" y="905" />
+        <di:waypoint x="1860" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_11_di" bpmnElement="Flow_P10_11">
+        <di:waypoint x="1260" y="455" />
+        <di:waypoint x="2040" y="905" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_12_di" bpmnElement="Flow_P10_12">
+        <di:waypoint x="1980" y="455" />
+        <di:waypoint x="2040" y="905" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_13_di" bpmnElement="Flow_P10_13">
+        <di:waypoint x="2160" y="905" />
+        <di:waypoint x="2220" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_14_di" bpmnElement="Flow_P10_14">
+        <di:waypoint x="2340" y="455" />
+        <di:waypoint x="2400" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_15_di" bpmnElement="Flow_P10_15">
+        <di:waypoint x="2450" y="455" />
+        <di:waypoint x="2580" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_16_di" bpmnElement="Flow_P10_16">
+        <di:waypoint x="2450" y="455" />
+        <di:waypoint x="2760" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_P10_17_di" bpmnElement="Flow_P10_17">
+        <di:waypoint x="2700" y="455" />
+        <di:waypoint x="2760" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Vendor_1_di" bpmnElement="Flow_Vendor_1">
+        <di:waypoint x="296" y="1150" />
+        <di:waypoint x="480" y="1150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Vendor_2_di" bpmnElement="Flow_Vendor_2">
+        <di:waypoint x="600" y="1150" />
+        <di:waypoint x="700" y="1150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Vendor_3_di" bpmnElement="Flow_Vendor_3">
+        <di:waypoint x="820" y="1150" />
+        <di:waypoint x="920" y="1150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Message_P10_PO_di" bpmnElement="Message_P10_PO">
+        <di:waypoint x="1560" y="790" />
+        <di:waypoint x="540" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Message_P10_Delivery_di" bpmnElement="Message_P10_Delivery">
+        <di:waypoint x="760" y="1185" />
+        <di:waypoint x="1740" y="870" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
