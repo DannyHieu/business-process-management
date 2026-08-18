@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="ubNG7lB6cY3yqd5uOT4l">
+    <mxGraphModel dx="1212" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="850" width="1130" x="130" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-45" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="830" width="1110" x="140" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-2" parent="r7zg8lisnOAA_nwWMIPQ-45" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="830" width="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-3" parent="r7zg8lisnOAA_nwWMIPQ-45" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#005700;fillColor=#008a00;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="60" width="1070" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-4" parent="r7zg8lisnOAA_nwWMIPQ-45" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Times New Roman;fontSize=16;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;color: light-dark(rgb(248, 246, 246), rgb(237, 237, 237));&quot;&gt;KHỐI 1: DOANH NGHIỆP NỘI BỘ (FPT SOFTWARE)&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="1040" x="40" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-5" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="&lt;font&gt;Ban Giám đốc FPT Software&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 57, 7);&quot;&gt;(&lt;b&gt;Board of Directors -&lt;/b&gt; &lt;b&gt;BOD&lt;/b&gt;)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="440" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-6" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="&lt;font&gt;Khối Đảm bảo Chất lượng FPT&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;(QA Group)&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="170" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-7" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Khối Sản xuất Phần mềm&amp;nbsp;&lt;div&gt;&lt;b&gt;(FSU)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="710" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-10" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-6" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="285" y="220" />
+              <mxPoint x="555" y="220" />
+            </Array>
+            <mxPoint x="480" y="443.41999999999996" as="sourcePoint" />
+            <mxPoint x="541.3600000000004" y="235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-11" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-7" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="220" />
+              <mxPoint x="555" y="220" />
+            </Array>
+            <mxPoint x="560" y="370" as="sourcePoint" />
+            <mxPoint x="610" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-12" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Nhóm Chuyên trách Quy trình&lt;div&gt;&lt;b&gt;(SEPG)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="30" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-13" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-12" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="380" />
+              <mxPoint x="285" y="380" />
+            </Array>
+            <mxPoint x="100" y="430" as="sourcePoint" />
+            <mxPoint x="330" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-14" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Ban Kiểm soát Chất lượng&amp;nbsp;&lt;div&gt;&lt;b&gt;(FQC)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="310" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-15" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-14" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="380" />
+              <mxPoint x="285" y="380" />
+            </Array>
+            <mxPoint x="560" y="370" as="sourcePoint" />
+            <mxPoint x="610" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-16" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Chuyên viên Quy trình CMMI&lt;div&gt;&lt;b style=&quot;color: rgb(255, 57, 7);&quot;&gt;(Lane - Ban SEPG)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="30" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-17" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-16" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="600" as="sourcePoint" />
+            <mxPoint x="610" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-18" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Kiểm toán viên FQC Auditor&lt;div&gt;&lt;b style=&quot;color: rgb(255, 57, 7);&quot;&gt;(Lane - Ban FQC)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="310" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-19" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-18" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="450" y="590" as="sourcePoint" />
+            <mxPoint x="450" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-20" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; white-space: nowrap;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 16px; text-align: center; white-space: normal;&quot;&gt;Đội ngũ Dự án Phần mềm&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;b style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 16px; text-align: center; white-space: normal; background-color: transparent;&quot;&gt;(Project Team)&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="570" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-21" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="&lt;span style=&quot;white-space: nowrap; color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22shape%3Dext%3Bdouble%3D1%3Brounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23fff2cc%3BstrokeColor%3D%23d6b656%3BgradientColor%3D%23ffd966%3BfontFamily%3DTimes%20New%20Roman%3BfontSize%3D16%3B%22%20value%3D%22Qu%E1%BA%A3n%20tr%E1%BB%8B%20D%E1%BB%B1%20%C3%A1n%26amp%3Bnbsp%3B%26lt%3Bdiv%26gt%3B%26lt%3Bb%26gt%3B(Lane%20-%20Project%20Manager%20-%20PM)%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fdiv%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%2280%22%20width%3D%22230%22%20x%3D%22990%22%20y%3D%22820%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;Bộ phận Chất Lượng Dự Án&amp;nbsp;&lt;div&gt;&lt;b&gt;(Project QA Dept)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="850" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-22" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-20" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="380" />
+              <mxPoint x="825" y="380" />
+            </Array>
+            <mxPoint x="690" y="430" as="sourcePoint" />
+            <mxPoint x="830" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-23" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-21" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="965" y="380" />
+              <mxPoint x="825" y="380" />
+            </Array>
+            <mxPoint x="1090" y="464" as="sourcePoint" />
+            <mxPoint x="950" y="384" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-25" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Quản trị Dự án&amp;nbsp;&lt;div&gt;&lt;b style=&quot;color: rgb(255, 57, 7);&quot;&gt;(Lane - Project Manager - PM)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="570" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-26" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-25" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-20" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="660" y="600" as="sourcePoint" />
+            <mxPoint x="660" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-27" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Chuyên viên SQA&amp;nbsp;&lt;br&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(255, 57, 7), rgb(255, 255, 255));&quot;&gt;(Lane - SQA Specialist)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="850" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-28" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-27" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-21" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="980" y="590" as="sourcePoint" />
+            <mxPoint x="980" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-30" parent="r7zg8lisnOAA_nwWMIPQ-45" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;fontFamily=Times New Roman;fontSize=16;" value="Nhóm kỹ thuật dự án&amp;nbsp;&lt;div&gt;&lt;b&gt;(Dev &amp;amp; Tester)&lt;/b&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(255, 57, 7);&quot;&gt;(Lane - Project Team)&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="570" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="r7zg8lisnOAA_nwWMIPQ-32" edge="1" parent="r7zg8lisnOAA_nwWMIPQ-45" source="r7zg8lisnOAA_nwWMIPQ-30" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r7zg8lisnOAA_nwWMIPQ-25" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="690" />
+            </Array>
+            <mxPoint x="680" y="610" as="sourcePoint" />
+            <mxPoint x="680" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -23,6 +23,7 @@
 - <b>30.07.2026:</b> Phần 2 - Mô hình hóa quy trình (Phân tích và Thiết kế BPMN)
 - <b>10.08.2026:</b> Task - Tìm hiểu lý do chọn đề tài "Công ty FPT Software" - Trích dẫn nguồn tham khảo
 - <b>10.08.2026:</b> Phần 3 - Phương pháp thực hiện (Dựa trên bằng chứng)
+- <b>18.08.2026:</b> Phần 1,2,3 - Chỉnh sửa lại phiên bản cuối và hoàn thành 3 phần này
 
 
 ## Khó khăn khi thực hiện:
