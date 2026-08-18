@@ -5,3 +5,4 @@ Quy trình Tuyển dụng và phân bổ nhân sự (https://docs.google.com/doc
 <br>3/8/2026: Đã hoàn thành mục 3 rubik cho 2 quy trình trên và upload file .docx
 <br>10/08/2026Đã làm xong mục Phân tích định tính - giá trị gia tăng của QT8
 <br>10/08/2026 Cơ cấu tổ chức công ty: (https://docs.google.com/document/d/1g1IvKENEXo9h-rOTrw8ruNPaq99kRBimM26F-JppLKk/edit?hl=vi&tab=t.0)
+<br> Hoàn thành Quy trình 8, xóa file .docx cũ, cập nhật file mới và các hình ảnh
