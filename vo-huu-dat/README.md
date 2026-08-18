@@ -147,3 +147,103 @@ Nhằm tối ưu hóa hiệu quả mô hình hóa hai quy trình trên phục v�
 1. **Công cụ vẽ BPMN 2.0:** Sử dụng **Bizagi Modeler** hoặc **Draw.io** để xây dựng các Swimlane Diagrams rõ ràng giữa các phòng ban IT, Thu mua, Tài chính, Khách hàng và Đội L1/L2/L3.
 2. **Hệ thống Quản lý tài sản:** Đề xuất nghiên cứu mockup quy trình trên **Snipe-IT** (mã nguồn mở phổ biến cho quản trị tài sản IT).
 3. **Hệ thống Quản lý hỗ trợ:** Đề xuất mockup các trạng thái workflow (Open -> In Progress -> Escalated -> Under Testing -> Waiting for Customer -> Closed) trên **Jira Service Management**.
+
+---
+
+## VI. Đối Chiếu Bài Làm Của Các Thành Viên Khác Và Phần Bổ Sung Cho Võ Hữu Đạt
+Sau khi tham khảo cấu trúc bài làm, tiến độ và sản phẩm của các thành viên khác trong nhóm, có thể rút ra một số điểm quan trọng để hoàn thiện bài của **Võ Hữu Đạt** theo hướng đồng bộ hơn với mặt bằng chung của nhóm:
+
+### 1. Điểm mạnh hiện tại của bài Võ Hữu Đạt
+- Đã xác định rõ **2 quy trình trọng tâm** và mô tả được mục tiêu, phạm vi, tác nhân, luồng xử lý và KPI.
+- Đã có nền tảng khá tốt cho việc phát triển tiếp sang **BPMN**, **bằng chứng nghiệp vụ** và **phân tích cải tiến**.
+- Cách trình bày bám sát ngữ cảnh doanh nghiệp outsourcing phần mềm, phù hợp với đề tài chung về **FPT Software / Software Outsourcing**.
+
+### 2. Điểm tham khảo rút ra từ các thành viên khác
+- **Nguyễn Thái Hòa** đã trình bày tiến độ theo từng **Rubik 1-4**, có liên kết rõ ràng giữa mô tả bằng lời, BPMN, phương pháp khai phá quy trình và phân tích quy trình. Đây là mẫu tốt để Võ Hữu Đạt tách các deliverable theo đầu mục chấm điểm.
+- **Trần Quỳnh Tiền** đã cập nhật trạng thái hoàn thành cho từng phần và bổ sung thêm nội dung **phân tích định tính - giá trị gia tăng**. Đây là hướng rất phù hợp để áp dụng cho quy trình P07 và P10.
+- **Lý Kiến Đức** nhấn mạnh phần **trích dẫn nguồn tham khảo**, nêu rõ khó khăn, mức độ xác thực dữ liệu và cách dùng tài liệu công khai làm căn cứ. Điều này hữu ích cho phần "bằng chứng nghiệp vụ" và "giả định nghiên cứu" của Võ Hữu Đạt.
+- **Bạch Thế Hiển** và một số thành viên khác đã bổ sung **BPMN/drawio/image**, cho thấy bài nộp hoàn chỉnh không nên chỉ dừng ở mô tả bằng chữ mà cần có sơ đồ trực quan.
+- **Nguyễn Xuân Hiếu** thể hiện rõ cấu trúc theo **Rubik 1, Rubik 2, Rubik 3**, giúp dễ theo dõi mức độ hoàn thành của từng đầu việc trong repo.
+
+### 3. Khoảng trống hiện tại trong phần của Võ Hữu Đạt
+Hiện tại nội dung của Võ Hữu Đạt mạnh ở phần mô tả quy trình bằng lời, nhưng còn thiếu hoặc chưa thể hiện rõ các phần sau:
+- Chưa có **Rubik 2** ở dạng sơ đồ BPMN hoặc file `.bpmn` / `.drawio`.
+- Chưa có phần **phân tích giá trị gia tăng (Value-Added Analysis)** cho từng bước của quy trình.
+- Chưa có phần **AS-IS vs TO-BE** để chỉ ra điểm nghẽn, lãng phí và hướng cải tiến.
+- Chưa gom nhóm rõ ràng các sản phẩm đầu ra theo **rubik chấm điểm**, trong khi đây là điểm các bạn khác làm khá rõ.
+- Chưa liệt kê cụ thể **nguồn tham khảo công khai** cho các giả định về SLA, quy trình mua sắm, asset lifecycle, helpdesk workflow.
+
+### 4. Phần bổ sung đề xuất trực tiếp cho bài Võ Hữu Đạt
+Để đồng bộ với chất lượng chung của nhóm, phần của Võ Hữu Đạt nên được bổ sung thêm:
+
+#### A. Bổ sung cấu trúc theo Rubik
+Nên chia rõ thành:
+1. **Rubik 1 - Mô tả quy trình bằng lời:** Đã có nền tảng, chỉ cần chuẩn hóa lại theo mẫu.
+2. **Rubik 2 - Mô hình BPMN:** Vẽ ít nhất 2 sơ đồ cho P07 và P10, ưu tiên có Swimlane rõ vai trò.
+3. **Rubik 3 - Phương pháp dựa trên bằng chứng:** Gắn từng bước của quy trình với form mẫu, log, ticket, biên bản bàn giao, bảng báo giá, asset register, knowledge base.
+4. **Rubik 4 - Phân tích quy trình:** Đánh giá điểm nghẽn, rủi ro SLA, thời gian chờ phê duyệt, vòng lặp rework, đề xuất cải tiến.
+
+#### B. Bổ sung phân tích giá trị gia tăng
+Đối với mỗi quy trình nên phân loại từng bước theo 3 nhóm:
+- **VA (Value-Added):** Tạo giá trị trực tiếp cho người dùng hoặc khách hàng.
+- **BVA (Business Value-Added):** Không tạo giá trị trực tiếp nhưng cần thiết cho kiểm soát, tuân thủ, phê duyệt.
+- **NVA (Non-Value-Added):** Chờ đợi, nhập liệu lặp lại, chuyển giao thủ công, hoặc xử lý lại do lỗi.
+
+Ví dụ:
+- Với **P10 - Mua sắm và quản lý tài sản CNTT**:
+  - Cài đặt thiết bị đúng chuẩn và bàn giao cho nhân viên: **VA**
+  - Phê duyệt ngân sách, đối chiếu báo giá: **BVA**
+  - Chờ phản hồi giữa nhiều cấp hoặc nhập lại thông tin từ ticket sang PO thủ công: **NVA**
+- Với **P07 - Bảo hành và hỗ trợ khách hàng**:
+  - Phản hồi ban đầu đúng SLA, khắc phục lỗi, triển khai patch: **VA**
+  - Phân quyền escalation, kiểm thử hồi quy, cập nhật tri thức: **BVA**
+  - Ticket thiếu thông tin phải trao đổi qua lại nhiều lần, chờ xác nhận giữa L1-L2-L3: **NVA**
+
+#### C. Bổ sung phân tích AS-IS và hướng TO-BE
+Nên chỉ ra tối thiểu 3 điểm nghẽn cho mỗi quy trình:
+
+**Đối với P10:**
+- Phê duyệt mua sắm qua nhiều cấp gây kéo dài lead time.
+- Kiểm kho và cập nhật tài sản còn thủ công, dễ lệch dữ liệu.
+- Quản lý vòng đời thiết bị chưa gắn cảnh báo hết bảo hành / hết khấu hao.
+
+**Hướng TO-BE đề xuất:**
+- Tích hợp ticket mua sắm với hệ thống Asset Management để tránh nhập liệu lặp.
+- Dùng form chuẩn và ma trận phê duyệt theo ngưỡng chi phí.
+- Tự động nhắc hạn bảo hành, kiểm kê, khấu hao và thu hồi tài sản.
+
+**Đối với P07:**
+- Ticket gửi qua nhiều kênh khiến khó chuẩn hóa thông tin đầu vào.
+- L1 thiếu knowledge base nên tỷ lệ escalations cao.
+- Việc kiểm thử và deploy patch phụ thuộc phối hợp thủ công giữa QA, DevOps, Dev.
+
+**Hướng TO-BE đề xuất:**
+- Chuẩn hóa một cổng ticket duy nhất với form bắt buộc log, mức độ ảnh hưởng, ảnh chụp lỗi.
+- Xây dựng knowledge base cho lỗi lặp lại.
+- Thiết lập workflow SLA và cảnh báo quá hạn tự động trên Jira Service Management.
+
+#### D. Bổ sung nguồn bằng chứng và tham khảo
+Để làm bài chắc hơn, nên gắn thêm các nguồn tham khảo công khai như:
+- Tài liệu về **IT Asset Management lifecycle**
+- Tài liệu mô hình **ITIL Incident Management / Service Desk**
+- Tài liệu công khai về **SLA, CMDB, Asset Register, Change Management**
+- Mẫu biểu như **Purchase Request**, **Purchase Order**, **Asset Handover Form**, **UAT Sign-off**, **Incident Ticket Template**
+
+### 5. Đề xuất cách trình bày cuối cùng cho Võ Hữu Đạt
+Phiên bản hoàn thiện nên gồm:
+- `README.md`: Tổng quan 10 quy trình, chọn 2 quy trình trọng tâm, mô tả chi tiết, KPI, công cụ đề xuất.
+- `week-01-scope-evidence/README.md`: Cơ cấu tổ chức, actors, glossary, evidence register.
+- `week-02-process-description/`: Mô tả AS-IS chi tiết cho P07 và P10.
+- `week-03-bpmn/`: File `.bpmn`, `.drawio`, `.png` cho 2 quy trình.
+- `week-04-analysis/`: Phân tích GTGT, điểm nghẽn, AS-IS/TO-BE, đề xuất cải tiến, KPI theo dõi.
+
+---
+
+## VII. Kết Luận Hướng Hoàn Thiện
+So với các thành viên khác, phần của **Võ Hữu Đạt** có lợi thế là nội dung nghiệp vụ đã khá đầy đủ và bám đúng bối cảnh doanh nghiệp. Phần cần bổ sung chủ yếu không phải là viết lại từ đầu, mà là:
+- Chuẩn hóa theo **cấu trúc Rubik**
+- Thêm **BPMN trực quan**
+- Tăng cường **phân tích giá trị gia tăng và cải tiến quy trình**
+- Bổ sung **nguồn bằng chứng / tài liệu tham khảo**
+
+Nếu hoàn thiện thêm các phần trên, bài của Võ Hữu Đạt sẽ đồng đều hơn với các thành viên khác và đủ cơ sở để phát triển thành một bài tiểu luận BPM hoàn chỉnh, có cả mô tả nghiệp vụ, mô hình hóa, bằng chứng và phân tích cải tiến.

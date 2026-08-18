@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1k3xauz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.24.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1k3xauz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.24.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
   <bpmn:collaboration id="Collaboration_11g69kd">
     <bpmn:participant id="Participant_0eybxkz" name="Công ty phần mềm" processRef="Process_0ab3vy1" />
     <bpmn:participant id="Participant_1iscb2e" name="Khách hàng" processRef="Process_15tel86" />
@@ -16,6 +16,138 @@
     <bpmn:messageFlow id="Flow_0awibv7" name="Yêu cầu cung cấp đặc tả phần mềm" sourceRef="Activity_1ialbek" targetRef="Activity_05swj7b" />
     <bpmn:messageFlow id="Flow_17lrdhk" name="Đặc tả phần mềm" sourceRef="Activity_05swj7b" targetRef="Event_16xko8d" />
     <bpmn:messageFlow id="Flow_036mx8s" sourceRef="Activity_0b3hjkp" targetRef="Event_1o1tuwp" />
+    <bpmn:textAnnotation id="TextAnnotation_0xl4y8w">
+      <bpmn:text>VA - Khởi tạo nhu cầu cốt lõi của dự án từ phía Khách hàng.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0jkqkws" associationDirection="None" sourceRef="Activity_1w1suxk" targetRef="TextAnnotation_0xl4y8w" />
+    <bpmn:textAnnotation id="TextAnnotation_1ra4fud">
+      <bpmn:text>VBA - Bắt buộc để luân chuyển thông tin nội bộ cho đội ngũ đánh giá.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0v1hb23" associationDirection="None" sourceRef="Activity_0yhyftu" targetRef="TextAnnotation_1ra4fud" />
+    <bpmn:textAnnotation id="TextAnnotation_118qxcs">
+      <bpmn:text>VBA - Giúp định hình bài toán kinh doanh, không tạo mã nguồn nhưng cần thiết để báo giá.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_020xg9j" associationDirection="None" sourceRef="Activity_19cegf2" targetRef="TextAnnotation_118qxcs" />
+    <bpmn:textAnnotation id="TextAnnotation_0w0ob5t">
+      <bpmn:text>VBA - Dự trù rủi ro kỹ thuật và nguồn lực, phục vụ cho việc tính chi phí.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0jk814r" associationDirection="None" sourceRef="Activity_0gpa0mn" targetRef="TextAnnotation_0w0ob5t" />
+    <bpmn:textAnnotation id="TextAnnotation_0s21y8v">
+      <bpmn:text>VBA - Hoạt động thương mại bắt buộc để chốt giao dịch.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_113qah6" associationDirection="None" sourceRef="Activity_07hrsbs" targetRef="TextAnnotation_0s21y8v" />
+    <bpmn:textAnnotation id="TextAnnotation_0gjg4ce">
+      <bpmn:text>VA - Khách hàng rà soát để đảm bảo ngân sách phù hợp.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1rfuuab" associationDirection="None" sourceRef="Activity_08tzfl8" targetRef="TextAnnotation_0gjg4ce" />
+    <bpmn:textAnnotation id="TextAnnotation_1jibsag">
+      <bpmn:text>VBA - Chốt chặn pháp lý quan trọng nhất để khởi động dự án.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0sk2ntp" associationDirection="None" sourceRef="Activity_0st9niv" targetRef="TextAnnotation_1jibsag" />
+    <bpmn:textAnnotation id="TextAnnotation_1gytdcm">
+      <bpmn:text>VBA - Quá trình khơi gợi yêu cầu (Elicitation) để hiểu rõ nghiệp vụ khách hàng.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0wsgo0o" associationDirection="None" sourceRef="Activity_1ialbek" targetRef="TextAnnotation_1gytdcm" />
+    <bpmn:textAnnotation id="TextAnnotation_03shuwe">
+      <bpmn:text>VA - Khách hàng cung cấp nguyên liệu đầu vào (tài liệu, quy trình cũ).</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1d9aqsg" associationDirection="None" sourceRef="Activity_05swj7b" targetRef="TextAnnotation_03shuwe" />
+    <bpmn:textAnnotation id="TextAnnotation_02nb817">
+      <bpmn:text>VA - Chuyển đổi ý tưởng thành bản vẽ kỹ thuật chi tiết.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0ifbu45" associationDirection="None" sourceRef="Activity_0a34bw5" targetRef="TextAnnotation_02nb817" />
+    <bpmn:textAnnotation id="TextAnnotation_0j86f2o">
+      <bpmn:text>VA - Tài liệu yêu cầu phần mềm là tài sản mà khách hàng sở hữu để kiểm chứng phần mềm.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_02wowo8" associationDirection="None" sourceRef="Activity_1sl57ff" targetRef="TextAnnotation_0j86f2o" />
+    <bpmn:textAnnotation id="TextAnnotation_0fhe8o8">
+      <bpmn:text>NVA - Vòng lặp phát sinh do khách hàng chưa ưng ý tài liệu.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0sj0ib3" associationDirection="None" sourceRef="Activity_0trjdis" targetRef="TextAnnotation_0fhe8o8" />
+    <bpmn:textAnnotation id="TextAnnotation_0n16w2l">
+      <bpmn:text>VA - Chốt chặn phạm vi (Scope baseline) để team bắt đầu sản xuất.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1xpx6t9" associationDirection="None" sourceRef="Activity_0yy324n" targetRef="TextAnnotation_0n16w2l" />
+    <bpmn:textAnnotation id="TextAnnotation_0fk94iv">
+      <bpmn:text>VBA - Tránh rủi ro trôi trượt phạm vi (Scope Creep) về sau.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1qa4odw" associationDirection="None" sourceRef="Activity_1o6r9u3" targetRef="TextAnnotation_0fk94iv" />
+    <bpmn:textAnnotation id="TextAnnotation_0fhnkdy">
+      <bpmn:text>VBA - Phục vụ công tác quản lý tiến độ nội bộ.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0jqhkqx" associationDirection="None" sourceRef="Activity_0y2bq0z" targetRef="TextAnnotation_0fhnkdy" />
+    <bpmn:textAnnotation id="TextAnnotation_0theb12">
+      <bpmn:text>VBA - Đảm bảo tiêu chuẩn chất lượng công ty, không bán trực tiếp cho khách.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1hgngti" associationDirection="None" sourceRef="Activity_1rmkh0n" targetRef="TextAnnotation_0theb12" />
+    <bpmn:textAnnotation id="TextAnnotation_1s3a6i9">
+      <bpmn:text>VA - Hoạt động cốt lõi trực tiếp tạo ra sản phẩm phần mềm.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1ld5isy" associationDirection="None" sourceRef="Activity_1xh87xc" targetRef="TextAnnotation_1s3a6i9" />
+    <bpmn:textAnnotation id="TextAnnotation_0emvj6y">
+      <bpmn:text>VA - Bắt buộc để phần mềm có nơi vận hành thử nghiệm.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0zfh0d2" associationDirection="None" sourceRef="Activity_0aufnjw" targetRef="TextAnnotation_0emvj6y" />
+    <bpmn:textAnnotation id="TextAnnotation_12gbih8">
+      <bpmn:text>VBA - Lọc lỗi trước khi giao cho khách hàng.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1m2hh55" associationDirection="None" sourceRef="Activity_18uczvi" targetRef="TextAnnotation_12gbih8" />
+    <bpmn:textAnnotation id="TextAnnotation_1stw3q0">
+      <bpmn:text>NVA - Lãng phí do làm sai ngay từ đầu.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0yq72i4" associationDirection="None" sourceRef="Activity_1r1sdxj" targetRef="TextAnnotation_1stw3q0" />
+    <bpmn:textAnnotation id="TextAnnotation_140tqz4">
+      <bpmn:text>NVA - Công việc làm lại (Rework) gây tốn chi phí (Cost of poor quality).</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1u30n4x" associationDirection="None" sourceRef="Activity_1rl3xqx" targetRef="TextAnnotation_140tqz4" />
+    <bpmn:textAnnotation id="TextAnnotation_07inooy">
+      <bpmn:text>VBA - Cổng kiểm duyệt chất lượng cuối cùng của nội bộ.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0fotuvh" associationDirection="None" sourceRef="Activity_0ujh02p" targetRef="TextAnnotation_07inooy" />
+    <bpmn:textAnnotation id="TextAnnotation_0fe078n">
+      <bpmn:text>VA - Đưa sản phẩm lên môi trường giống hệt thực tế để khách hàng kiểm chứng.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_07a6afe" associationDirection="None" sourceRef="Activity_1eaduw3" targetRef="TextAnnotation_0fe078n" />
+    <bpmn:textAnnotation id="TextAnnotation_076qv4v">
+      <bpmn:text>VA - Khách hàng trải nghiệm và xác nhận giá trị phần mềm.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0no5n8e" associationDirection="None" sourceRef="Activity_1mquvxs" targetRef="TextAnnotation_076qv4v" />
+    <bpmn:textAnnotation id="TextAnnotation_1xdedcf">
+      <bpmn:text>NVA - Vòng lặp phát sinh do lỗi lọt ra ngoài phạm vi kiểm soát của nội bộ.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0eqgovj" associationDirection="None" sourceRef="Activity_1frn46v" targetRef="TextAnnotation_1xdedcf" />
+    <bpmn:textAnnotation id="TextAnnotation_1o8l858">
+      <bpmn:text>VBA - Cần thiết để phân định rạch ròi giữa Lỗi (Bug) và Tính năng mới (CR).</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1c4jq8p" associationDirection="None" sourceRef="Activity_1fzcqo6" targetRef="TextAnnotation_1o8l858" />
+    <bpmn:textAnnotation id="TextAnnotation_0dsizb9">
+      <bpmn:text>VBA - Bảo vệ doanh thu của công ty khi khách hàng thay đổi yêu cầu.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1820tnk" associationDirection="None" sourceRef="Activity_137wy49" targetRef="TextAnnotation_0dsizb9" />
+    <bpmn:textAnnotation id="TextAnnotation_10hw5gn">
+      <bpmn:text>VBA - Bắt buộc để thực thi sự thay đổi một cách có kiểm soát.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1b6i68j" associationDirection="None" sourceRef="Activity_15u3gle" targetRef="TextAnnotation_10hw5gn" />
+    <bpmn:textAnnotation id="TextAnnotation_1pvqdej">
+      <bpmn:text>VA - Bằng chứng cho thấy phần mềm đã đạt giá trị kỳ vọng.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0k1dxpy" associationDirection="None" sourceRef="Activity_1f6o4o4" targetRef="TextAnnotation_1pvqdej" />
+    <bpmn:textAnnotation id="TextAnnotation_0kg1u3n">
+      <bpmn:text>VA - Đưa phần mềm vào vận hành thực tế, sinh lời cho khách hàng.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1roaxsq" associationDirection="None" sourceRef="Activity_1bei3tk" targetRef="TextAnnotation_0kg1u3n" />
+    <bpmn:textAnnotation id="TextAnnotation_0ssue51">
+      <bpmn:text>VA - Chuyển giao toàn quyền sở hữu tài sản số cho khách hàng.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1cvszt3" associationDirection="None" sourceRef="Activity_135usgz" targetRef="TextAnnotation_0ssue51" />
+    <bpmn:textAnnotation id="TextAnnotation_07pz3gt">
+      <bpmn:text>VA - Hoạt động công nhận sự thành công của toàn bộ dự án.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_19shgrh" associationDirection="None" sourceRef="Activity_1j7nxa6" targetRef="TextAnnotation_07pz3gt" />
+    <bpmn:textAnnotation id="TextAnnotation_1pwqgn8">
+      <bpmn:text>VA - Hoàn thành nghĩa vụ tài chính, mang lại dòng tiền.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0pzeykf" associationDirection="None" sourceRef="Activity_0b3hjkp" targetRef="TextAnnotation_1pwqgn8" />
   </bpmn:collaboration>
   <bpmn:process id="Process_0ab3vy1" isExecutable="false">
     <bpmn:laneSet id="LaneSet_0j66ygl">
@@ -37,12 +169,12 @@
         <bpmn:flowNodeRef>Activity_1rl3xqx</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1iyujq9" name="Business Analysis">
-        <bpmn:flowNodeRef>Activity_19cegf2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1ialbek</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1sl57ff</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_16xko8d</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0a34bw5</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1bei3tk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_19cegf2</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0ob0ecw" name="Project Manager">
         <bpmn:flowNodeRef>Activity_1eaduw3</bpmn:flowNodeRef>
@@ -152,10 +284,6 @@
     <bpmn:task id="Activity_0gpa0mn" name="Đánh giá tính khả thi và estimate">
       <bpmn:incoming>Flow_1gy2oa4</bpmn:incoming>
       <bpmn:outgoing>Flow_06a8ii5</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Activity_19cegf2" name="Phân tích yêu cầu sơ bộ">
-      <bpmn:incoming>Flow_0kpskzt</bpmn:incoming>
-      <bpmn:outgoing>Flow_1u066qp</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="Activity_1ialbek" name="Lấy yêu cầu chi tiết">
       <bpmn:incoming>Flow_0k12f18</bpmn:incoming>
@@ -274,114 +402,118 @@
       <bpmn:incoming>Flow_0c8h55b</bpmn:incoming>
       <bpmn:outgoing>Flow_18k7ane</bpmn:outgoing>
     </bpmn:task>
+    <bpmn:task id="Activity_19cegf2" name="Phân tích yêu cầu sơ bộ">
+      <bpmn:incoming>Flow_0kpskzt</bpmn:incoming>
+      <bpmn:outgoing>Flow_1u066qp</bpmn:outgoing>
+    </bpmn:task>
   </bpmn:process>
   <bpmn:process id="Process_15tel86" isExecutable="false">
-    <bpmn:startEvent id="StartEvent_1khbe3o">
-      <bpmn:outgoing>Flow_0pj32zl</bpmn:outgoing>
-    </bpmn:startEvent>
-    <bpmn:task id="Activity_1w1suxk" name="Gửi yêu cầu phát triển phần mềm">
-      <bpmn:incoming>Flow_0pj32zl</bpmn:incoming>
-    </bpmn:task>
-    <bpmn:intermediateCatchEvent id="Event_16vpb4d" name="Báo giá được tiếp nhận">
-      <bpmn:outgoing>Flow_0iiy3r2</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0zx44yy" />
-    </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_08tzfl8" name="Kiểm tra báo giá sơ bộ">
-      <bpmn:incoming>Flow_0iiy3r2</bpmn:incoming>
-      <bpmn:outgoing>Flow_0k8vd0n</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:exclusiveGateway id="Gateway_09lpcfd">
-      <bpmn:incoming>Flow_0k8vd0n</bpmn:incoming>
-      <bpmn:outgoing>Flow_0f27y6y</bpmn:outgoing>
-      <bpmn:outgoing>Flow_1jbsi0f</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:endEvent id="Event_0jahf81">
-      <bpmn:incoming>Flow_0f27y6y</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:exclusiveGateway id="Gateway_150mzut">
-      <bpmn:incoming>Flow_1q2bpta</bpmn:incoming>
-      <bpmn:outgoing>Flow_0x9zzwh</bpmn:outgoing>
-      <bpmn:outgoing>Flow_0upf4hn</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:task id="Activity_1mquvxs" name="Kiểm thử dựa trên trường hợp thực tế (UAT)">
-      <bpmn:incoming>Flow_0814yqs</bpmn:incoming>
-      <bpmn:outgoing>Flow_075ja8y</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:exclusiveGateway id="Gateway_0c0fed6">
-      <bpmn:incoming>Flow_075ja8y</bpmn:incoming>
-      <bpmn:outgoing>Flow_1c6t0x8</bpmn:outgoing>
-      <bpmn:outgoing>Flow_12xspix</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="Flow_0pj32zl" sourceRef="StartEvent_1khbe3o" targetRef="Activity_1w1suxk" />
-    <bpmn:sequenceFlow id="Flow_0iiy3r2" sourceRef="Event_16vpb4d" targetRef="Activity_08tzfl8" />
-    <bpmn:sequenceFlow id="Flow_0k8vd0n" sourceRef="Activity_08tzfl8" targetRef="Gateway_09lpcfd" />
-    <bpmn:sequenceFlow id="Flow_0f27y6y" name="Không ký hợp đông" sourceRef="Gateway_09lpcfd" targetRef="Event_0jahf81" />
-    <bpmn:sequenceFlow id="Flow_1jbsi0f" sourceRef="Gateway_09lpcfd" targetRef="Activity_0st9niv" />
-    <bpmn:sequenceFlow id="Flow_1q2bpta" name="Tài liệu được duyệt ?" sourceRef="Event_0kw93xg" targetRef="Gateway_150mzut" />
-    <bpmn:sequenceFlow id="Flow_0x9zzwh" name="Có" sourceRef="Gateway_150mzut" targetRef="Activity_0yy324n" />
-    <bpmn:sequenceFlow id="Flow_0upf4hn" name="Không" sourceRef="Gateway_150mzut" targetRef="Activity_0trjdis" />
-    <bpmn:sequenceFlow id="Flow_075ja8y" name="Có lỗi" sourceRef="Activity_1mquvxs" targetRef="Gateway_0c0fed6" />
-    <bpmn:sequenceFlow id="Flow_1c6t0x8" name="Không" sourceRef="Gateway_0c0fed6" targetRef="Activity_1f6o4o4" />
-    <bpmn:sequenceFlow id="Flow_12xspix" name="Có" sourceRef="Gateway_0c0fed6" targetRef="Activity_1frn46v" />
-    <bpmn:sequenceFlow id="Flow_0rsmodh" sourceRef="Activity_1j7nxa6" targetRef="Activity_0b3hjkp" />
-    <bpmn:task id="Activity_0st9niv" name="Ký hợp đồng">
-      <bpmn:incoming>Flow_1jbsi0f</bpmn:incoming>
-      <bpmn:outgoing>Flow_00zba0m</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:intermediateCatchEvent id="Event_0kw93xg" name="Tại liệu được nhận">
-      <bpmn:incoming>Flow_041m4ef</bpmn:incoming>
-      <bpmn:outgoing>Flow_1q2bpta</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_130hm4t" />
-    </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_0yy324n" name="Gửi thông báo tài liệu được duyệt">
-      <bpmn:incoming>Flow_0x9zzwh</bpmn:incoming>
-      <bpmn:outgoing>Flow_0713q34</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Activity_0trjdis" name="Yêu cầu chỉnh sửa">
-      <bpmn:incoming>Flow_0upf4hn</bpmn:incoming>
-    </bpmn:task>
-    <bpmn:task id="Activity_1f6o4o4" name="UAT Sign-off">
-      <bpmn:incoming>Flow_1c6t0x8</bpmn:incoming>
-      <bpmn:outgoing>Flow_04eb2fh</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Activity_1frn46v" name="Thông báo lỗi UAT">
-      <bpmn:incoming>Flow_12xspix</bpmn:incoming>
-      <bpmn:outgoing>Flow_0yi2zok</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_0814yqs" sourceRef="Event_0zxu13z" targetRef="Activity_1mquvxs" />
-    <bpmn:intermediateCatchEvent id="Event_0zxu13z" name="Sản phẩm được triển khai lên UAT">
-      <bpmn:incoming>Flow_0713q34</bpmn:incoming>
-      <bpmn:incoming>Flow_0yi2zok</bpmn:incoming>
-      <bpmn:outgoing>Flow_0814yqs</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0wao8kq" />
-    </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_1knh36s" sourceRef="Event_0zvn0vv" targetRef="Activity_1j7nxa6" />
-    <bpmn:sequenceFlow id="Flow_00zba0m" sourceRef="Activity_0st9niv" targetRef="Activity_05swj7b" />
-    <bpmn:task id="Activity_05swj7b" name="Cung cấp yêu cầu">
-      <bpmn:incoming>Flow_00zba0m</bpmn:incoming>
-      <bpmn:outgoing>Flow_041m4ef</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_041m4ef" sourceRef="Activity_05swj7b" targetRef="Event_0kw93xg" />
-    <bpmn:sequenceFlow id="Flow_0713q34" sourceRef="Activity_0yy324n" targetRef="Event_0zxu13z" />
+    <bpmn:sequenceFlow id="Flow_03c9t23" sourceRef="Activity_0b3hjkp" targetRef="Event_1a8pr8t" />
+    <bpmn:sequenceFlow id="Flow_0rsmodh" sourceRef="Activity_1j7nxa6" targetRef="Activity_0b3hjkp" />
+    <bpmn:sequenceFlow id="Flow_0yi2zok" sourceRef="Activity_1frn46v" targetRef="Event_0zxu13z" />
     <bpmn:sequenceFlow id="Flow_04eb2fh" sourceRef="Activity_1f6o4o4" targetRef="Event_0zvn0vv" />
-    <bpmn:task id="Activity_0b3hjkp" name="Thanh toán">
-      <bpmn:incoming>Flow_0rsmodh</bpmn:incoming>
-      <bpmn:outgoing>Flow_03c9t23</bpmn:outgoing>
+    <bpmn:sequenceFlow id="Flow_0713q34" sourceRef="Activity_0yy324n" targetRef="Event_0zxu13z" />
+    <bpmn:sequenceFlow id="Flow_041m4ef" sourceRef="Activity_05swj7b" targetRef="Event_0kw93xg" />
+    <bpmn:sequenceFlow id="Flow_00zba0m" sourceRef="Activity_0st9niv" targetRef="Activity_05swj7b" />
+    <bpmn:sequenceFlow id="Flow_12xspix" name="Có" sourceRef="Gateway_0c0fed6" targetRef="Activity_1frn46v" />
+    <bpmn:sequenceFlow id="Flow_1c6t0x8" name="Không" sourceRef="Gateway_0c0fed6" targetRef="Activity_1f6o4o4" />
+    <bpmn:sequenceFlow id="Flow_075ja8y" name="Có lỗi" sourceRef="Activity_1mquvxs" targetRef="Gateway_0c0fed6" />
+    <bpmn:sequenceFlow id="Flow_0814yqs" sourceRef="Event_0zxu13z" targetRef="Activity_1mquvxs" />
+    <bpmn:sequenceFlow id="Flow_0upf4hn" name="Không" sourceRef="Gateway_150mzut" targetRef="Activity_0trjdis" />
+    <bpmn:sequenceFlow id="Flow_0x9zzwh" name="Có" sourceRef="Gateway_150mzut" targetRef="Activity_0yy324n" />
+    <bpmn:sequenceFlow id="Flow_1q2bpta" name="Tài liệu được duyệt ?" sourceRef="Event_0kw93xg" targetRef="Gateway_150mzut" />
+    <bpmn:sequenceFlow id="Flow_1jbsi0f" sourceRef="Gateway_09lpcfd" targetRef="Activity_0st9niv" />
+    <bpmn:sequenceFlow id="Flow_0f27y6y" name="Không ký hợp đông" sourceRef="Gateway_09lpcfd" targetRef="Event_0jahf81" />
+    <bpmn:sequenceFlow id="Flow_0k8vd0n" sourceRef="Activity_08tzfl8" targetRef="Gateway_09lpcfd" />
+    <bpmn:sequenceFlow id="Flow_0iiy3r2" sourceRef="Event_16vpb4d" targetRef="Activity_08tzfl8" />
+    <bpmn:sequenceFlow id="Flow_0pj32zl" sourceRef="StartEvent_1khbe3o" targetRef="Activity_1w1suxk" />
+    <bpmn:endEvent id="Event_1a8pr8t">
+      <bpmn:incoming>Flow_03c9t23</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="Activity_1j7nxa6" name="Nghiệm thu">
+      <bpmn:incoming>Flow_1knh36s</bpmn:incoming>
+      <bpmn:outgoing>Flow_0rsmodh</bpmn:outgoing>
     </bpmn:task>
     <bpmn:intermediateCatchEvent id="Event_0zvn0vv" name="Yêu cầu nghiệm thu được chuyển tới">
       <bpmn:incoming>Flow_04eb2fh</bpmn:incoming>
       <bpmn:outgoing>Flow_1knh36s</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_01x65m3" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:task id="Activity_1j7nxa6" name="Nghiệm thu">
-      <bpmn:incoming>Flow_1knh36s</bpmn:incoming>
-      <bpmn:outgoing>Flow_0rsmodh</bpmn:outgoing>
+    <bpmn:task id="Activity_0b3hjkp" name="Thanh toán">
+      <bpmn:incoming>Flow_0rsmodh</bpmn:incoming>
+      <bpmn:outgoing>Flow_03c9t23</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_0yi2zok" sourceRef="Activity_1frn46v" targetRef="Event_0zxu13z" />
-    <bpmn:endEvent id="Event_1a8pr8t">
-      <bpmn:incoming>Flow_03c9t23</bpmn:incoming>
+    <bpmn:task id="Activity_05swj7b" name="Cung cấp yêu cầu">
+      <bpmn:incoming>Flow_00zba0m</bpmn:incoming>
+      <bpmn:outgoing>Flow_041m4ef</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_0zxu13z" name="Sản phẩm được triển khai lên UAT">
+      <bpmn:incoming>Flow_0713q34</bpmn:incoming>
+      <bpmn:incoming>Flow_0yi2zok</bpmn:incoming>
+      <bpmn:outgoing>Flow_0814yqs</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0wao8kq" />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_1frn46v" name="Thông báo lỗi UAT">
+      <bpmn:incoming>Flow_12xspix</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yi2zok</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1f6o4o4" name="UAT Sign-off">
+      <bpmn:incoming>Flow_1c6t0x8</bpmn:incoming>
+      <bpmn:outgoing>Flow_04eb2fh</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_0trjdis" name="Yêu cầu chỉnh sửa">
+      <bpmn:incoming>Flow_0upf4hn</bpmn:incoming>
+    </bpmn:task>
+    <bpmn:task id="Activity_0yy324n" name="Gửi thông báo tài liệu được duyệt">
+      <bpmn:incoming>Flow_0x9zzwh</bpmn:incoming>
+      <bpmn:outgoing>Flow_0713q34</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_0kw93xg" name="Tại liệu được nhận">
+      <bpmn:incoming>Flow_041m4ef</bpmn:incoming>
+      <bpmn:outgoing>Flow_1q2bpta</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_130hm4t" />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_0st9niv" name="Ký hợp đồng">
+      <bpmn:incoming>Flow_1jbsi0f</bpmn:incoming>
+      <bpmn:outgoing>Flow_00zba0m</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_0c0fed6">
+      <bpmn:incoming>Flow_075ja8y</bpmn:incoming>
+      <bpmn:outgoing>Flow_1c6t0x8</bpmn:outgoing>
+      <bpmn:outgoing>Flow_12xspix</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_1mquvxs" name="Kiểm thử dựa trên trường hợp thực tế (UAT)">
+      <bpmn:incoming>Flow_0814yqs</bpmn:incoming>
+      <bpmn:outgoing>Flow_075ja8y</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_150mzut">
+      <bpmn:incoming>Flow_1q2bpta</bpmn:incoming>
+      <bpmn:outgoing>Flow_0x9zzwh</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0upf4hn</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Event_0jahf81">
+      <bpmn:incoming>Flow_0f27y6y</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_03c9t23" sourceRef="Activity_0b3hjkp" targetRef="Event_1a8pr8t" />
+    <bpmn:exclusiveGateway id="Gateway_09lpcfd">
+      <bpmn:incoming>Flow_0k8vd0n</bpmn:incoming>
+      <bpmn:outgoing>Flow_0f27y6y</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1jbsi0f</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_08tzfl8" name="Kiểm tra báo giá sơ bộ">
+      <bpmn:incoming>Flow_0iiy3r2</bpmn:incoming>
+      <bpmn:outgoing>Flow_0k8vd0n</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_16vpb4d" name="Báo giá được tiếp nhận">
+      <bpmn:outgoing>Flow_0iiy3r2</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0zx44yy" />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_1w1suxk" name="Gửi yêu cầu phát triển phần mềm">
+      <bpmn:incoming>Flow_0pj32zl</bpmn:incoming>
+    </bpmn:task>
+    <bpmn:startEvent id="StartEvent_1khbe3o">
+      <bpmn:outgoing>Flow_0pj32zl</bpmn:outgoing>
+    </bpmn:startEvent>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_11g69kd">
@@ -454,10 +586,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0gpa0mn_di" bpmnElement="Activity_0gpa0mn">
         <dc:Bounds x="680" y="980" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_19cegf2_di" bpmnElement="Activity_19cegf2">
-        <dc:Bounds x="690" y="800" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1ialbek_di" bpmnElement="Activity_1ialbek">
@@ -566,6 +694,10 @@
         <dc:Bounds x="4940" y="830" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19cegf2_di" bpmnElement="Activity_19cegf2">
+        <dc:Bounds x="690" y="820" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_032ryrd_di" bpmnElement="Flow_032ryrd">
         <di:waypoint x="408" y="560" />
         <di:waypoint x="440" y="560" />
@@ -573,21 +705,21 @@
       <bpmndi:BPMNEdge id="Flow_0kpskzt_di" bpmnElement="Flow_0kpskzt">
         <di:waypoint x="645" y="560" />
         <di:waypoint x="740" y="560" />
-        <di:waypoint x="740" y="800" />
+        <di:waypoint x="740" y="820" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1u066qp_di" bpmnElement="Flow_1u066qp">
-        <di:waypoint x="790" y="810" />
+        <di:waypoint x="790" y="830" />
         <di:waypoint x="790" y="565" />
         <di:waypoint x="835" y="565" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1gy2oa4_di" bpmnElement="Flow_1gy2oa4">
         <di:waypoint x="620" y="585" />
-        <di:waypoint x="620" y="1020" />
-        <di:waypoint x="680" y="1020" />
+        <di:waypoint x="620" y="1000" />
+        <di:waypoint x="680" y="1000" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_06a8ii5_di" bpmnElement="Flow_06a8ii5">
-        <di:waypoint x="780" y="1020" />
-        <di:waypoint x="860" y="1020" />
+        <di:waypoint x="780" y="1000" />
+        <di:waypoint x="860" y="1000" />
         <di:waypoint x="860" y="590" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1byk9lm_di" bpmnElement="Flow_1byk9lm">
@@ -897,14 +1029,14 @@
         <di:waypoint x="2155" y="310" />
         <di:waypoint x="2370" y="310" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2245" y="318.5" width="15" height="14" />
+          <dc:Bounds x="2245" y="319" width="15" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0upf4hn_di" bpmnElement="Flow_0upf4hn">
         <di:waypoint x="2130" y="285" />
         <di:waypoint x="2130" y="220" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2134" y="249.5" width="51" height="14" />
+          <dc:Bounds x="2144" y="250" width="32" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_075ja8y_di" bpmnElement="Flow_075ja8y">
@@ -971,6 +1103,138 @@
       <bpmndi:BPMNEdge id="Flow_03c9t23_di" bpmnElement="Flow_03c9t23">
         <di:waypoint x="5420" y="240" />
         <di:waypoint x="5482" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0jkqkws_di" bpmnElement="Association_0jkqkws">
+        <di:waypoint x="450" y="193" />
+        <di:waypoint x="500" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0v1hb23_di" bpmnElement="Association_0v1hb23">
+        <di:waypoint x="510" y="520" />
+        <di:waypoint x="564" y="412" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_020xg9j_di" bpmnElement="Association_020xg9j">
+        <di:waypoint x="790" y="858" />
+        <di:waypoint x="910" y="852" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0jk814r_di" bpmnElement="Association_0jk814r">
+        <di:waypoint x="680" y="1040" />
+        <di:waypoint x="580" y="1025" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_113qah6_di" bpmnElement="Association_113qah6">
+        <di:waypoint x="1014" y="605" />
+        <di:waypoint x="1038" y="647" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1rfuuab_di" bpmnElement="Association_1rfuuab">
+        <di:waypoint x="1113" y="260" />
+        <di:waypoint x="1123" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0sk2ntp_di" bpmnElement="Association_0sk2ntp">
+        <di:waypoint x="1436" y="260" />
+        <di:waypoint x="1453" y="242" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0wsgo0o_di" bpmnElement="Association_0wsgo0o">
+        <di:waypoint x="1632" y="890" />
+        <di:waypoint x="1659" y="940" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1d9aqsg_di" bpmnElement="Association_1d9aqsg">
+        <di:waypoint x="1765" y="260" />
+        <di:waypoint x="1771" y="216" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0ifbu45_di" bpmnElement="Association_0ifbu45">
+        <di:waypoint x="1989" y="890" />
+        <di:waypoint x="1988" y="947" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_02wowo8_di" bpmnElement="Association_02wowo8">
+        <di:waypoint x="2157" y="890" />
+        <di:waypoint x="2181" y="947" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0sj0ib3_di" bpmnElement="Association_0sj0ib3">
+        <di:waypoint x="2180" y="159" />
+        <di:waypoint x="2220" y="141" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1xpx6t9_di" bpmnElement="Association_1xpx6t9">
+        <di:waypoint x="2456" y="270" />
+        <di:waypoint x="2486" y="237" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1qa4odw_di" bpmnElement="Association_1qa4odw">
+        <di:waypoint x="2593" y="670" />
+        <di:waypoint x="2629" y="607" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0jqhkqx_di" bpmnElement="Association_0jqhkqx">
+        <di:waypoint x="2790" y="705" />
+        <di:waypoint x="2840" y="699" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1hgngti_di" bpmnElement="Association_1hgngti">
+        <di:waypoint x="2990" y="1215" />
+        <di:waypoint x="3020" y="1225" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1ld5isy_di" bpmnElement="Association_1ld5isy">
+        <di:waypoint x="2940" y="970" />
+        <di:waypoint x="2992" y="867" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0zfh0d2_di" bpmnElement="Association_0zfh0d2">
+        <di:waypoint x="3186" y="970" />
+        <di:waypoint x="3226" y="909" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1m2hh55_di" bpmnElement="Association_1m2hh55">
+        <di:waypoint x="3560" y="1203" />
+        <di:waypoint x="3512" y="1207" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0yq72i4_di" bpmnElement="Association_0yq72i4">
+        <di:waypoint x="4040" y="1156" />
+        <di:waypoint x="4120" y="1148" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1u30n4x_di" bpmnElement="Association_1u30n4x">
+        <di:waypoint x="3989" y="950" />
+        <di:waypoint x="3989" y="909" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0fotuvh_di" bpmnElement="Association_0fotuvh">
+        <di:waypoint x="4002" y="1310" />
+        <di:waypoint x="4024" y="1380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_07a6afe_di" bpmnElement="Association_07a6afe">
+        <di:waypoint x="4050" y="699" />
+        <di:waypoint x="3990" y="697" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0no5n8e_di" bpmnElement="Association_0no5n8e">
+        <di:waypoint x="4136" y="200" />
+        <di:waypoint x="4153" y="182" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0eqgovj_di" bpmnElement="Association_0eqgovj">
+        <di:waypoint x="4480" y="353" />
+        <di:waypoint x="4570" y="357" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1c4jq8p_di" bpmnElement="Association_1c4jq8p">
+        <di:waypoint x="4510" y="981" />
+        <di:waypoint x="4580" y="969" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1820tnk_di" bpmnElement="Association_1820tnk">
+        <di:waypoint x="4300" y="771" />
+        <di:waypoint x="4393" y="810" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1b6i68j_di" bpmnElement="Association_1b6i68j">
+        <di:waypoint x="4396" y="660" />
+        <di:waypoint x="4378" y="608" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0k1dxpy_di" bpmnElement="Association_0k1dxpy">
+        <di:waypoint x="4586" y="200" />
+        <di:waypoint x="4600" y="185" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1roaxsq_di" bpmnElement="Association_1roaxsq">
+        <di:waypoint x="5009" y="910" />
+        <di:waypoint x="5030" y="955" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1cvszt3_di" bpmnElement="Association_1cvszt3">
+        <di:waypoint x="5128" y="660" />
+        <di:waypoint x="5160" y="591" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_19shgrh_di" bpmnElement="Association_19shgrh">
+        <di:waypoint x="5246" y="200" />
+        <di:waypoint x="5260" y="185" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0pzeykf_di" bpmnElement="Association_0pzeykf">
+        <di:waypoint x="5408" y="280" />
+        <di:waypoint x="5451" y="326" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1q6g9ly_di" bpmnElement="Flow_1q6g9ly">
         <di:waypoint x="390" y="250" />
@@ -1057,6 +1321,138 @@
         <di:waypoint x="5370" y="280" />
         <di:waypoint x="5370" y="682" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="TextAnnotation_0xl4y8w_di" bpmnElement="TextAnnotation_0xl4y8w" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="500" y="140" width="160" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1ra4fud_di" bpmnElement="TextAnnotation_1ra4fud" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="540" y="340" width="130" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_118qxcs_di" bpmnElement="TextAnnotation_118qxcs" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="910" y="830" width="160" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0w0ob5t_di" bpmnElement="TextAnnotation_0w0ob5t" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="430" y="990" width="150" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0s21y8v_di" bpmnElement="TextAnnotation_0s21y8v" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="1000" y="647" width="120" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0gjg4ce_di" bpmnElement="TextAnnotation_0gjg4ce" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="1080" y="290" width="104" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1jibsag_di" bpmnElement="TextAnnotation_1jibsag" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="1450" y="170" width="130" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1gytdcm_di" bpmnElement="TextAnnotation_1gytdcm" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="1620" y="940" width="102" height="100" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_03shuwe_di" bpmnElement="TextAnnotation_03shuwe" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="1729" y="130" width="121" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_02nb817_di" bpmnElement="TextAnnotation_02nb817" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="1938" y="947" width="132" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0j86f2o_di" bpmnElement="TextAnnotation_0j86f2o" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="2140" y="947" width="220" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0fhe8o8_di" bpmnElement="TextAnnotation_0fhe8o8" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="2220" y="100" width="130" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0n16w2l_di" bpmnElement="TextAnnotation_0n16w2l" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="2470" y="180" width="220" height="57" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0fk94iv_di" bpmnElement="TextAnnotation_0fk94iv" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="2600" y="550" width="180" height="57" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0fhnkdy_di" bpmnElement="TextAnnotation_0fhnkdy" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="2840" y="674" width="160" height="57" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0theb12_di" bpmnElement="TextAnnotation_0theb12" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="3020" y="1220" width="160" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1s3a6i9_di" bpmnElement="TextAnnotation_1s3a6i9" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="2960" y="810" width="180" height="57" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0emvj6y_di" bpmnElement="TextAnnotation_0emvj6y" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="3210" y="837" width="140" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_12gbih8_di" bpmnElement="TextAnnotation_12gbih8" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="3410" y="1190" width="102" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1stw3q0_di" bpmnElement="TextAnnotation_1stw3q0" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="4120" y="1124" width="130" height="57" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_140tqz4_di" bpmnElement="TextAnnotation_140tqz4" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="3938" y="823" width="122" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_07inooy_di" bpmnElement="TextAnnotation_07inooy" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="3980" y="1380" width="120" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0fe078n_di" bpmnElement="TextAnnotation_0fe078n" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="3810" y="674" width="180" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_076qv4v_di" bpmnElement="TextAnnotation_076qv4v" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="4150" y="110" width="160" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1xdedcf_di" bpmnElement="TextAnnotation_1xdedcf" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="4570" y="340" width="102" height="100" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1o8l858_di" bpmnElement="TextAnnotation_1o8l858" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="4580" y="940" width="102" height="100" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0dsizb9_di" bpmnElement="TextAnnotation_0dsizb9" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="4390" y="810" width="102" height="100" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_10hw5gn_di" bpmnElement="TextAnnotation_10hw5gn" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="4310" y="536" width="120" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1pvqdej_di" bpmnElement="TextAnnotation_1pvqdej" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="4600" y="110" width="110" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0kg1u3n_di" bpmnElement="TextAnnotation_0kg1u3n" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="4990" y="955" width="102" height="100" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0ssue51_di" bpmnElement="TextAnnotation_0ssue51" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="5140" y="505" width="120" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_07pz3gt_di" bpmnElement="TextAnnotation_07pz3gt" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="5260" y="110" width="110" height="86" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1pwqgn8_di" bpmnElement="TextAnnotation_1pwqgn8" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="5420" y="326" width="120" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
