@@ -4,4 +4,5 @@
 - Rubik 2: Mô hình Tuyển dụng và phân bổ nhân sự(BPMN):
 <img width="1383" height="991" alt="BPMN (1)" src="https://github.com/user-attachments/assets/f9fb104a-c249-4c99-934c-6f480ee85286" />
 - Rubik 3: Phương pháp thực hiện https://docs.google.com/document/d/15_Ly-zh49wmIMMveom9bsFu3beisx168yv_lwCljWi4/edit?usp=sharing. (Đã hoàn thành)
+
 - Rubik 4: Phân tích quy trình: https://docs.google.com/document/d/1q98_m5qVBJ5eIRPwcm0_XPxQ1unZCAVg7_Fv9mJLjdk/edit?usp=sharing. (Đã hoàn thành)
