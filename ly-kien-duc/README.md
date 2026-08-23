@@ -15,7 +15,7 @@
 
 ## 🚀 Link nội dung bài làm:
 
-<a href="https://uithcm-my.sharepoint.com/:w:/g/personal/25410189_ms_uit_edu_vn/IQDvaeScNB4jQ7nkj-I0GJSxAaabrKWnsAmwVno3mOOkmVI?e=B76DIX">https://uithcm-my.sharepoint.com/:w:/g/personal/25410189_ms_uit_edu_vn/IQDvaeScNB4jQ7nkj-I0GJSxAaabrKWnsAmwVno3mOOkmVI?e=B76DIX</a>
+- 25410189_DoAn_QTQLCL-CTQT.docx
 
 ## Tiến độ thực hiện:
 - <b>15.07.2026:</b> Phần 1A - Tìm hiểu và viết mô tả bằng lời cho quy trình "Quản lý chất lượng và cải tiến quy trình - FSoft"
@@ -24,6 +24,8 @@
 - <b>10.08.2026:</b> Task - Tìm hiểu lý do chọn đề tài "Công ty FPT Software" - Trích dẫn nguồn tham khảo
 - <b>10.08.2026:</b> Phần 3 - Phương pháp thực hiện (Dựa trên bằng chứng)
 - <b>18.08.2026:</b> Phần 1,2,3 - Chỉnh sửa lại phiên bản cuối và hoàn thành 3 phần này
+- <b>23.08.2026:</b> Hoàn thành vẽ lại BPMN hoàn chỉnh (phiên bản cuối) cho Phần 2
+- <b>24.08.2026:</b> Phần 4.1 - Phân tích giá trị gia tăng (Hoàn thành)
 
 
 ## Khó khăn khi thực hiện:
