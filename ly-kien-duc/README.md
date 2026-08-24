@@ -26,6 +26,8 @@
 - <b>18.08.2026:</b> Phần 1,2,3 - Chỉnh sửa lại phiên bản cuối và hoàn thành 3 phần này
 - <b>23.08.2026:</b> Hoàn thành vẽ lại BPMN hoàn chỉnh (phiên bản cuối) cho Phần 2
 - <b>24.08.2026:</b> Phần 4.1 - Phân tích giá trị gia tăng (Hoàn thành)
+- <b>25.08.2026:</b> Phần 4.2 - Phân tích sự lãng phí (Hoàn thành)
+- <b>25.08.2026:</b> Phần 4.3 - Phân tích các bên liên quan & Mô hình xương cá (Hoàn thành)
 
 
 ## Khó khăn khi thực hiện:
