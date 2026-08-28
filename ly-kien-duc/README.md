@@ -28,6 +28,7 @@
 - <b>24.08.2026:</b> Phần 4.1 - Phân tích giá trị gia tăng (Hoàn thành)
 - <b>25.08.2026:</b> Phần 4.2 - Phân tích sự lãng phí (Hoàn thành)
 - <b>25.08.2026:</b> Phần 4.3 - Phân tích các bên liên quan & Mô hình xương cá (Hoàn thành)
+- <b>27.08.2026:</b> Tạo slide với các nội dung đã có
 
 
 ## Khó khăn khi thực hiện:
