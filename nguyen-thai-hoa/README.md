@@ -8,6 +8,7 @@
 | 2     | Mô hình hóa quy trình phát triển phần mềm | Hoàn thành | [Link](./do_an_quy-trinh-phat-trien-phan-mem-1.bpmn)                                                                                        |
 | 3     | Mô phỏng quá trình khai phá quy trình     | Hoàn thành | [Link](https://docs.google.com/document/d/15a1mLOpmAmZnEMcfWHvWhDnfLjJxT3OWoosTYUNuNF0/edit?usp=sharing)                                    |
 | 4     | Phân tích quy trình                       | Hoàn thành | [Link](https://docs.google.com/document/d/1Ds3OoV2yS128-fhdYLexw83D3hvbzvLG/edit?usp=sharing&ouid=105859768960007253819&rtpof=true&sd=true) |
+| 5     | Nội dung slides quy trình phát triển phần mềm | Hoàn thành | [Link](./noi-dung-slide.md) |
 
 ## 26 - Jul 2026
 
@@ -35,3 +36,7 @@
 ## 16 Aug 2026
 
 - Hoàn thiện Rubik 4: Phân tích quy trình -> https://docs.google.com/document/d/1Ds3OoV2yS128-fhdYLexw83D3hvbzvLG/edit?usp=sharing&ouid=105859768960007253819&rtpof=true&sd=true
+
+## 29 Aug 2026
+
+- Hoàn thành checklist và nội dung 11 slides về quy trình phát triển phần mềm
