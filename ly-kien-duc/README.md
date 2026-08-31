@@ -29,6 +29,7 @@
 - <b>25.08.2026:</b> Phần 4.2 - Phân tích sự lãng phí (Hoàn thành)
 - <b>25.08.2026:</b> Phần 4.3 - Phân tích các bên liên quan & Mô hình xương cá (Hoàn thành)
 - <b>27.08.2026:</b> Tạo slide với các nội dung đã có
+- <b>31.08.2026:</b> Hoàn thành slide về tất cả nội dung của quy trình 03
 
 
 ## Khó khăn khi thực hiện:
