@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="-J0WyDAF0sdSDXCCXAWE">
+    <mxGraphModel dx="1681" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-1" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fontFamily=Times New Roman;fontSize=16;align=left;verticalAlign=middle;spacing=8;spacingTop=0;spacingRight=0;fillColor=#3B82F6;strokeColor=#00CCCC;gradientColor=light-dark(#136CC8,#436697);fontColor=#FFFFFF;shadow=1;rounded=0;" value="&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(19, 255, 220), rgb(18, 18, 18));&quot;&gt;KHỞI TẠO &amp;amp; HIỆU CHỈNH&lt;/b&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(19, 255, 220), rgb(18, 18, 18));&quot;&gt;(Process Tailoring &amp;amp; QA Plan)&lt;/i&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- PM gửi hồ sơ dự án, yêu cầu kiểm soát CL&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- SQA trích PAL, phối hợp phân tích và lập QA Plan&lt;/span&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="130" width="400" x="50" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-20" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="mElNc_3xiyBLwEfuXxTw-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-2" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fontFamily=Times New Roman;fontSize=16;align=left;verticalAlign=middle;spacing=8;spacingTop=0;spacingRight=0;fillColor=#3B82F6;strokeColor=#00CCCC;gradientColor=light-dark(#136CC8,#436697);fontColor=#FFFFFF;shadow=1;rounded=0;" value="&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: rgb(19, 255, 220);&quot;&gt;THẨM ĐỊNH FQC &amp;amp; QPPOs&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- FQC thẩm định (SLA 24h)&lt;/div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- PM cam kết QPPOs &amp;amp; Test Plan&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Thẩm định OK - Sang bước 3&lt;/span&gt;&lt;/blockquote&gt;&lt;div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="130" width="400" x="440" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-23" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="mElNc_3xiyBLwEfuXxTw-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-24" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mElNc_3xiyBLwEfuXxTw-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-4" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fontFamily=Times New Roman;fontSize=16;align=left;verticalAlign=middle;spacing=8;spacingTop=0;spacingRight=0;fillColor=#3B82F6;strokeColor=#00CCCC;gradientColor=light-dark(#136CC8,#436697);fontColor=#FFFFFF;shadow=1;rounded=0;" value="&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: rgb(19, 255, 220);&quot;&gt;KIẾM TOÁN &amp;amp; CHẤT LƯỢNG&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;i style=&quot;color: rgb(19, 255, 220);&quot;&gt;(Process Audit &amp;amp; Quality Gates)&lt;/i&gt;&lt;/div&gt;&lt;div&gt;- SQA kiểm toán định kỳ&lt;/div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Lỗi NC &amp;lt;&amp;nbsp; ngưỡng: Re-audit&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Đạt: Sang Final Inspection&lt;/span&gt;&lt;/blockquote&gt;&lt;div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="130" width="400" x="830" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-25" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mElNc_3xiyBLwEfuXxTw-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-27" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mElNc_3xiyBLwEfuXxTw-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-5" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fontFamily=Times New Roman;fontSize=16;align=left;verticalAlign=middle;spacing=8;spacingTop=0;spacingRight=0;fillColor=#3B82F6;strokeColor=#00CCCC;gradientColor=light-dark(#136CC8,#436697);fontColor=#FFFFFF;shadow=1;rounded=0;" value="&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(19, 255, 220);&quot;&gt;NGHIỆM THU &amp;amp; ĐÓNG GÓI&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;i style=&quot;color: rgb(19, 255, 220);&quot;&gt;(UAT &amp;amp; Final Inspection)&lt;/i&gt;&lt;/div&gt;&lt;div&gt;- Final Inspection đạt&lt;/div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Client UAT&lt;span style=&quot;color: rgb(19, 255, 220);&quot;&gt; (Pass: Bàn giao thành công)&lt;/span&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Đạt: Sang Final Inspection&lt;/span&gt;&lt;/blockquote&gt;&lt;div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="130" width="400" x="1220" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-6" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.alarm_clock;" value="" vertex="1">
+          <mxGeometry height="30" width="27" x="567" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-9" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=-0.039;entryY=0.48;entryDx=0;entryDy=0;entryPerimeter=0;" target="mElNc_3xiyBLwEfuXxTw-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="150.41" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px; color: rgb(59, 130, 246);&quot;&gt;&lt;b&gt;FQC OK &amp;gt; 24h/No or PM &amp;gt; 24h?&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="236" x="595" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-11" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.alarm_clock;" value="" vertex="1">
+          <mxGeometry height="30" width="27" x="951" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-12" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="150.06" />
+            </Array>
+            <mxPoint x="990" y="174" as="sourcePoint" />
+            <mxPoint x="950" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px; color: rgb(59, 130, 246);&quot;&gt;&lt;b&gt;SV &amp;gt; ngưỡng?&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="106" x="984" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-14" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Globe_Warning.svg;direction=east;" value="" vertex="1">
+          <mxGeometry height="40" width="33.94" x="1090" y="131" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px; color: rgb(59, 130, 246);&quot;&gt;&lt;b&gt;NC &amp;gt; ngưỡng?&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="106" x="1123.94" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-16" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.alarm_clock;" value="" vertex="1">
+          <mxGeometry height="30" width="27" x="1350" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-17" edge="1" parent="1" source="mElNc_3xiyBLwEfuXxTw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=-0.039;entryY=0.48;entryDx=0;entryDy=0;entryPerimeter=0;" target="mElNc_3xiyBLwEfuXxTw-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1320" y="150.41" />
+            </Array>
+            <mxPoint x="1330" y="166" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px; color: rgb(59, 130, 246);&quot;&gt;&lt;b&gt;EV / Defect &amp;gt; ngưỡng?&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="1390" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;labelBackgroundColor=none;fillColor=#FF6666;gradientColor=#CC0000;strokeColor=#b85450;fontStyle=1;fontColor=#FFFFFF;" value="&lt;span&gt;End Event 2&lt;/span&gt;&lt;div&gt;&lt;i&gt;&amp;gt; 24h / Hủy / Hoãn (Dừng)&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="200.75" x="390" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;labelBackgroundColor=none;fillColor=#FF6666;gradientColor=#CC0000;strokeColor=#b85450;fontStyle=1;fontColor=#FFFFFF;" value="&lt;span&gt;End Event 3&lt;/span&gt;&lt;div&gt;&lt;i&gt;Chưa được phê duyệt (Dừng)&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="200.75" x="639.25" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;labelBackgroundColor=none;fillColor=#FF6666;gradientColor=#CC0000;strokeColor=#b85450;fontStyle=1;fontColor=#FFFFFF;" value="&lt;span&gt;End Event 4&lt;/span&gt;&lt;div&gt;&lt;i&gt;Dừng khẩn cấp (BOD)&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="200.75" x="1120" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="mElNc_3xiyBLwEfuXxTw-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;labelBackgroundColor=none;fillColor=#FF6666;gradientColor=#CC0000;strokeColor=#b85450;fontStyle=1;fontColor=#FFFFFF;" value="&lt;span&gt;End Event 4&lt;/span&gt;&lt;div&gt;&lt;i style=&quot;color: rgb(7, 238, 255);&quot;&gt;Bàn giao thành công&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="200.75" x="1419.25" y="350" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
