@@ -2,13 +2,13 @@
 
 ![Mô hình hóa quy trình phát triển phần mềm](./do_an_quy-trinh-phat-trien-phan-mem-1.svg)
 
-| Rubik | Tên                                       | Trạng thái | Link                                                                                                                                        |
-| ----- | ----------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | Mô tả quy trình bằng lời                  | Hoàn thành | [Link](https://docs.google.com/document/d/1sj0qO-C9QNed_lNKlr-mHoXA1vtG-zrsOiuRBxRA0lc/edit?usp=sharing)                                    |
-| 2     | Mô hình hóa quy trình phát triển phần mềm | Hoàn thành | [Link](./do_an_quy-trinh-phat-trien-phan-mem-1.bpmn)                                                                                        |
-| 3     | Mô phỏng quá trình khai phá quy trình     | Hoàn thành | [Link](https://docs.google.com/document/d/15a1mLOpmAmZnEMcfWHvWhDnfLjJxT3OWoosTYUNuNF0/edit?usp=sharing)                                    |
-| 4     | Phân tích quy trình                       | Hoàn thành | [Link](https://docs.google.com/document/d/1Ds3OoV2yS128-fhdYLexw83D3hvbzvLG/edit?usp=sharing&ouid=105859768960007253819&rtpof=true&sd=true) |
-| 5     | Nội dung slides quy trình phát triển phần mềm | Hoàn thành | [Link](./noi-dung-slide.md) |
+| Rubik | Tên                                           | Trạng thái | Link                                                                                                                                            |
+| ----- | --------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Mô tả quy trình bằng lời                      | Hoàn thành | [Link](https://docs.google.com/document/d/1sj0qO-C9QNed_lNKlr-mHoXA1vtG-zrsOiuRBxRA0lc/edit?usp=sharing)                                        |
+| 2     | Mô hình hóa quy trình phát triển phần mềm     | Hoàn thành | [Link](./do_an_quy-trinh-phat-trien-phan-mem-1.bpmn)                                                                                            |
+| 3     | Mô phỏng quá trình khai phá quy trình         | Hoàn thành | [Link](https://docs.google.com/document/d/15a1mLOpmAmZnEMcfWHvWhDnfLjJxT3OWoosTYUNuNF0/edit?usp=sharing)                                        |
+| 4     | Phân tích quy trình                           | Hoàn thành | [Link](https://docs.google.com/document/d/1Ds3OoV2yS128-fhdYLexw83D3hvbzvLG/edit?usp=sharing&ouid=105859768960007253819&rtpof=true&sd=true)     |
+| 5     | Nội dung slides quy trình phát triển phần mềm | Hoàn thành | [Link](https://docs.google.com/presentation/d/1yOKYmT5YhkeUjPrZUkGKcwlkd6X4URax/edit?usp=sharing&ouid=105859768960007253819&rtpof=true&sd=true) |
 
 ## 26 - Jul 2026
 
@@ -40,3 +40,7 @@
 ## 29 Aug 2026
 
 - Hoàn thành checklist và nội dung 11 slides về quy trình phát triển phần mềm
+
+## 05 Sept 2026
+
+- Hoàn thành nội dung slides quy trình phát triển phần mềm
