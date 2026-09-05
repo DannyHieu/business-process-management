@@ -1,51 +1,27 @@
 Tạo nội dung cho slides:
 
-- 10-13 trang
-- Cô đọng, súc tích
-- Mỗi trang trình bày 1 ý chính, có thể kèm hình minh họa hoặc sơ đồ (ví dụ: BPMN, flowchart, wireframe, mermaid)
+- dưới 10 trang
+- Đầy đủ ý và chi tiết theo cấu trúc bên dưới.
 - Mỗi trang có tiêu đề, nội dung chính, và hình minh họa (nếu cần)
 - Inputs từ các tài liệu: "Mô tả quy trình bằng lời", "Mô hình hóa quy trình phát triển phần mềm", "Mô phỏng quá trình khai phá quy trình", "Phân tích quy trình", các file bpmn trong cùng thư mục
 - Các trang slide có thể được trình bày như sau:
-  - Trang 1: Tiêu đề và giới thiệu
-    - Tiêu đề: "Quy trình phát triển phần mềm"
-    - Nội dung chính: Giới thiệu tổng quan về quy trình, mục tiêu của slide.
-    - Hình minh họa: Logo công ty hoặc hình ảnh liên quan đến phần mềm.
-  - Trang 2: Các tác nhân tham gia
-    - Tiêu đề: "Các tác nhân tham gia"
-    - Nội dung chính: Mô tả các tác nhân chính trong quy trình: Khách hàng, Công ty phần mềm (Sales, Business Analysis, Project Manager, Development Team, QA Team).
-    - Hình minh họa: Sơ đồ tổ chức hoặc biểu đồ các tác nhân tham gia.
-  - Trang 3: Giai đoạn Khởi tạo và Báo giá
-    - Tiêu đề: "Giai đoạn Khởi tạo và Báo giá"
-    - Nội dung chính: Mô tả các bước từ khi khách hàng gửi yêu cầu đến khi ký hợp đồng, bao gồm việc phân tích sơ bộ, đánh giá tính khả thi, và gửi báo giá sơ bộ.
-    - Hình minh họa: Flowchart hoặc BPMN
-  - Trang 4: Giai đoạn Chốt yêu cầu chi tiết
-    - Tiêu đề: "Giai đoạn Chốt yêu cầu chi tiết"
-    - Nội dung chính: Mô tả quá trình khách hàng cung cấp tài liệu đặc tả, bộ phận Phân tích nghiệp vụ phân tích và viết tài liệu yêu cầu hệ thống, và quá trình duyệt tài liệu.
-    - Hình minh họa: Flowchart hoặc BPMN
-  - Trang 5: Giai đoạn Phát triển và Kiểm thử nội bộ
-    - Tiêu đề: "Giai đoạn Phát triển và Kiểm thử nội bộ"
-    - Nội dung chính: Mô tả quá trình lập trình, kiểm thử nội bộ, và việc sửa lỗi cho đến khi phần mềm không còn lỗi.
-    - Hình minh họa: Flowchart hoặc BPMN
-  - Trang 6: Giai đoạn Nghiệm thu người dùng (UAT)
-    - Tiêu đề: "Giai đoạn Nghiệm thu người dùng (UAT)"
-    - Nội dung chính: Mô tả quá trình khách hàng dùng thử phần mềm, phản hồi lỗi hoặc yêu cầu tính năng mới, và cách xử lý các tình huống này.
-    - Hình minh họa: Flowchart hoặc BPMN
-  - Trang 7: Giai đoạn Bàn giao và Đóng dự án
-    - Tiêu đề: "Giai đoạn Bàn giao và Đóng dự án"
-    - Nội dung chính: Mô tả quá trình bàn giao mã nguồn, tài liệu kỹ thuật, và xác nhận nghiệm thu từ khách hàng, cũng như việc hoàn tất thanh toán.
-    - Hình minh họa: Flowchart hoặc BPMN
-  - Trang 8: Các kết quả có thể xảy ra của quy trình
-    - Tiêu đề: "Các kết quả có thể xảy ra của quy trình"
-    - Nội dung chính: Mô tả các kết quả có thể xảy ra, bao gồm hoàn thành quy trình thành công, khách hàng từ chối báo giá ban đầu, khách hàng phát hiện vấn đề khi nghiệm thu thực tế (UAT), và khách hàng chậm thanh toán
-    - Hình minh họa: Flowchart hoặc BPMN
-  - Trang 9: Kết luận và khuyến nghị
-    - Tiêu đề: "Kết luận và khuyến nghị"
-    - Nội dung chính: Tóm tắt các điểm chính của quy trình, nhấn mạnh tầm quan trọng của việc tuân thủ quy trình, và đưa ra các khuyến nghị cho việc cải thiện quy trình trong tương lai.
-    - Hình minh họa: Biểu đồ tổng quan hoặc sơ đồ tóm tắt các giai đoạn của quy trình.
-  - Trang 10: Phân tích quy trình
-    - Tiêu đề: "Phân tích quy trình"
-    - Nội dung chính: Trình bày các phân tích chi tiết về quy trình, bao gồm giá trị gia tăng, lãng phí, các bên liên quan. Đề xuất cải tiến quy trình dựa trên các phân tích này.
-    - Hình minh họa: Biểu đồ SWOT hoặc sơ đồ phân tích quy trình.
-  - Trang 11: Mô phỏng quá trình khai phá quy trình
-    - Tiêu đề: "Mô phỏng quá trình khai phá quy trình"
-    - Nội dung chính: Trình bày các mô phỏng về cách khai phá quy trình, bao gồm các tình huống thực tế và cách xử lý chúng. Mô phỏng này giúp các bên liên quan hiểu rõ hơn về quy trình và các vấn đề có thể phát sinh    
+  - Trang 1: Tổng quan quy trình
+    - Tiêu đề: "Tổng quan quy trình phát triển phần mềm"
+    - Nội dung chính: Giới thiệu tổng quan về quy trình phát triển phần mềm, các giai đoạn chính và mục tiêu của quy trình.
+    - Hình minh họa: Sơ đồ tổng quan các giai đoạn của quy trình bằng flowchart.
+  - Trang 2: Tác nhân, vai trò trong quy trình, kết quả của quy trình, đối tượng khách hàng của quy trình, giá trị mang lại của quy trình.
+  - Trang 3: Chi tiết quy tình
+    - Nội dung: Diễn giải quy trình bằng lời, mô tả các bước thực hiện và các điều kiện liên quan. Nhấn mạnh số cổng, các quyết định quan trọng và các điểm kiểm soát trong quy trình.
+    - Hình minh họa: Sơ đồ chi tiết các bước trong quy trình bằng BPMN.
+  - Trang 4: Khai phá quy trình
+    - Nội dung: Mô tả quá trình khai phá quy trình:
+      - Câu hỏi định tính: câu hỏi có cấu trúc và không có cấu trúc mà không thể đo lường nhưng giúp hiểu sâu về các khía cạnh của quy trình.
+      - Câu hỏi định lượng: câu hỏi có câu trúc và không có cấu trúc có thể đo lường và định lượng được các khía cạnh của quy trình.
+  - Trang 5: Phân tích quy trình - Phân tích giá trị gia tăng
+    - Nội dung: Trình bày kết quả phân tích giá trị gia tăng của quy trình, xác định các bước mang lại giá trị cao và các bước không mang lại giá trị. (VA, NVA, VBA)
+  - Trang 6: Phân tích quy trình - Phân tích sự lãng phí
+    - Nội dung: Trình bày kết quả phân tích sự lãng phí trong quy trình, xác định các bước không tạo ra giá trị và các nguồn lãng phí. (Mòve, Hold, Overdo)
+  - Trang 7: Phân tích quy trình - Phân tích các bên liên quan
+    - Nội dung: Trình bày kết quả phân tích các bên liên quan trong quy trình: mối quan tâm/kỳ vọng và điểm đau của từng bên.  Mô hình xương cá (Ishikawa) để minh họa các nguyên nhân gốc rễ của các vấn đề liên quan đến các bên.
+  - Trang 8: Phân tích quy trình - Phân tích định lượng
+    - Nội dung: Chi phí và các chỉ số định lượng khác liên quan đến quy trình, như thời gian thực hiện, số lần lặp lại, và hiệu suất của các bước trong quy trình. Thời gian xử lý, thời gian chu kỳ của từng giai đoạn.
