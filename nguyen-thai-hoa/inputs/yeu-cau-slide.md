@@ -19,9 +19,16 @@ Tạo nội dung cho slides:
       - Câu hỏi định lượng: câu hỏi có câu trúc và không có cấu trúc có thể đo lường và định lượng được các khía cạnh của quy trình.
   - Trang 5: Phân tích quy trình - Phân tích giá trị gia tăng
     - Nội dung: Trình bày kết quả phân tích giá trị gia tăng của quy trình, xác định các bước mang lại giá trị cao và các bước không mang lại giá trị. (VA, NVA, VBA)
+    - Notes: chèn thêm 1 slide với BPMN và các nhãn phân tích giá trị (VA, NVA, VBA) để minh họa trực quan.
   - Trang 6: Phân tích quy trình - Phân tích sự lãng phí
     - Nội dung: Trình bày kết quả phân tích sự lãng phí trong quy trình, xác định các bước không tạo ra giá trị và các nguồn lãng phí. (Mòve, Hold, Overdo)
+    - Notes: chèn thêm 1 slide với BPMN và các nhãn phân tích sự lãng phí (Mòve, Hold, Overdo) để minh họa trực quan.
   - Trang 7: Phân tích quy trình - Phân tích các bên liên quan
     - Nội dung: Trình bày kết quả phân tích các bên liên quan trong quy trình: mối quan tâm/kỳ vọng và điểm đau của từng bên.  Mô hình xương cá (Ishikawa) để minh họa các nguyên nhân gốc rễ của các vấn đề liên quan đến các bên.
   - Trang 8: Phân tích quy trình - Phân tích định lượng
     - Nội dung: Chi phí và các chỉ số định lượng khác liên quan đến quy trình, như thời gian thực hiện, số lần lặp lại, và hiệu suất của các bước trong quy trình. Thời gian xử lý, thời gian chu kỳ của từng giai đoạn.
+    - Notes: thêm 1 slide với BPMN và các nhãn định lượng (chi phí, thời gian, số lần lặp lại, hiệu suất) để minh họa trực quan.
+
+
+- Trang 3.1: Phương pháp thực hiện
+- Thêm 1 slide phương pháp thực hiện
