@@ -72,12 +72,19 @@
 
 ---
 
-## Slide 8: Phân tích quy trình - Phân tích định lượng
+## Slide 8-12: Phân tích quy trình - Phân tích định lượng
 
-"Cuối cùng là phân tích định lượng. Theo báo cáo, quy trình được mô hình hóa thành 5 khối công việc chính: khởi tạo và ký hợp đồng, phân tích và chốt tài liệu, thực thi song song, kiểm thử nội bộ, và UAT & bàn giao. Mỗi khối có thời gian và xác suất làm lại khác nhau."
+(0:00 - 0:15) Slide 1: Nền tảng đo lường
+"Dạ kính chào các anh chị. Kính mời các anh chị đi vào báo cáo định lượng quy trình phát triển phần mềm. Để thống nhất góc nhìn, mình sẽ bám sát 4 chỉ số cốt lõi: PT - Thời gian xử lý thực tế, WT - Thời gian chờ, CT - Tổng thời gian chu kỳ, và CTE - Hiệu suất quy trình."
 
-"Khối 2 có thời gian chu kỳ thực tế là 6,25 ngày do xác suất rework 20%. Khối 4 có thời gian chu kỳ thực tế là 2,86 ngày do tỷ lệ lỗi nội bộ 30%. Khối 5 có thời gian chu kỳ thực tế 5 ngày do xác suất bắt lỗi ở UAT là 20%. Tổng thời gian chu kỳ của toàn bộ dự án là 32,11 ngày trong khi thời gian xử lý lý tưởng chỉ là 29 ngày."
+(0:15 - 0:45) Slide 2: Đối chiếu AS-IS vs TO-BE
+"Nhìn vô bảng đối chiếu ở side này, điểm nổi cộm nhất nằm ở khâu Viết code đang ngốn tới 48 giờ, và Kiểm thử mất 32 giờ. Về phần thời gian chờ khách duyệt hay UAT dẫu chiếm tới 72 giờ, nhưng đa phần là thời gian thụ động. Do đó, mũi nhọn tối ưu của mình trong giai đoạn này sẽ đánh trực diện vào việc giảm 47% thời gian xử lý cốt lõi ở hai khâu code và test."
 
-"Điều này cho thấy hiệu suất thời gian là khoảng 90,3%, chứng tỏ rằng các vòng lặp rework và lỗi đang làm kéo dài dự án. Nút thắt cổ chai nằm ở các khâu rework, đặc biệt ở việc sửa tài liệu, test nội bộ và UAT. Vì vậy, mục tiêu cải tiến là giảm rework, chọn đúng scope từ đầu, và tăng tính rõ ràng trong giao tiếp và chốt yêu cầu."
+(0:45 - 1:15) Slide 3: Sơ đồ dòng chảy (Cập nhật điểm nghẽn)
+"Qua Slide 3, nhìn trực tiếp lên sơ đồ tôi đã gắn nhãn, các anh chị sẽ thấy khu vực báo đỏ tập trung toàn bộ ở cụm Dev và QA. Tiến độ dự án đang bị 'thắt cổ chai' ngay tại khâu code và test với tỷ lệ phát sinh lỗi cao đến 60%. Trọn vẹn dòng chảy công việc gần như bị kẹt cứng ở phân đoạn này trước khi ra được sản phẩm."
 
-"Kết luận chung là quy trình phát triển phần mềm hiện tại đã có cấu trúc rõ ràng nhưng còn nhiều rủi ro ở chốt scope, UAT và rework. Nếu giảm được các yếu tố lãng phí và định nghĩa rõ hơn tiêu chí hoàn thành, dự án sẽ ít bị trễ, ít phát sinh chi phí, và hiệu quả hơn rất nhiều."
+(1:15 - 1:40) Slide 4: Phân tích Nguyên nhân gốc rễ
+"Tại sao lỗi lại lọt tới 60%? Đi sâu phân tích 3-WHY ở Slide này, cái gốc của vấn đề là do mình đang dồn hết áp lực kiểm tra về cuối cho QA, và làm hoàn toàn bằng tay. Lập trình viên code xong hết mới quăng qua test. Mình chưa tích hợp được automation vào luồng CI/CD, và Dev cũng chưa có công cụ hỗ trợ để rà soát code ngay từ lúc gõ phím.
+
+(1:40 - 2:00) Slide 5: Đề xuất khắc phục
+"Để xử lý triệt để, Slide cuối đưa ra các nhóm giải pháp hành động: Đưa ngay framework kiểm thử tự động vô luồng CI/CD được chuẩn hóa ở giai đoạn đầu - Shift Left Testing, đồng thời ứng dụng công cụ AI để hỗ trợ Dev tăng tốc độ viết code. Riêng phần UAT, mình chỉ cần siết lại SLA để giới hạn khoảng thời gian chờ. Mục tiêu cuối cùng là gọt giảm 32% tổng thời gian chu kỳ và tối ưu chi phí. Xin kính mời các anh chị cho thêm ý kiến."

@@ -185,25 +185,25 @@ Dev: Đánh giá mức độ rõ ràng và hoàn thiện của tài liệu do BA
 5
 
 PM: Trung bình mỗi dự án outsource hiện tại phát sinh bao nhiêu Change Request (CR)?
-A. Dưới 3
-B. Từ 3-5
-C. Trên 5
+Dưới 3
+Từ 3-5
+Trên 5
 
 Khách hàng: Mức độ hài lòng của anh/chị về thời gian phản hồi (SLA) của đội ngũ hỗ trợ trên thang điểm từ 1 đến 10.
-A. 1-3
-B. 4-6
-C. 7-8
-D. 9-10
+1-3
+4-6
+7-8
+9-10
 
 Sales: Thời gian trung bình từ lúc nhận yêu cầu sơ bộ đến khi chốt được báo giá mất khoảng bao nhiêu ngày?
-A. <3 ngày
-B. 3-7 ngày
-C. >7 ngày
+<3 ngày
+3-7 ngày
+>7 ngày
 
 QA: Đâu là tỷ lệ phần trăm các lỗi (bugs) bị đẩy ngược từ môi trường UAT về lại môi trường Test?
-A. <10%
-B. 10-20%
-C. >20%
+<10%
+10-20%
+>20%
 
 Câu hỏi không có cấu trúc:
 Dựa trên kinh nghiệm quản lý, chi phí phát sinh do việc phải làm lại (rework) chiếm khoảng bao nhiêu phần trăm tổng ngân sách dự án?
@@ -249,7 +249,7 @@ Phân tích lỗi,
 Làm báo giá Change Request,
 Quy trình Change Request.
 
-NVA (Non-Value-Adding): hoạt động lãng phí nên giảm tối thiểu
+NVA (Non-Value-Adding):     
 Yêu cầu chỉnh sửa do tài liệu chưa được khách hàng chấp thuận,
 Báo bug do sai từ đầu,
 Sửa bug (rework),
@@ -272,10 +272,10 @@ Phân tích sự lãng phí trong quy trình
 Quy trình hiện tại xuất hiện 3 dạng lãng phí đặc thù của ngành phần mềm:
 
 Move (Chuyển giao thông tin)
-Luồng tin nhắn, yêu cầu chỉnh sửa và gửi lại tài liệu.
-Báo bug từ QA sang Dev thiếu thông tin, dẫn đến phải trao đổi lại nhiều lần.
-Nguyên nhân: giao tiếp qua file rời/emails khiến thông tin bị phân mảnh, dễ hiểu sai ý nhau.
-Giải pháp: dùng công cụ cộng tác trực tuyến như Figma, Google Docs và chuẩn hóa ticket lỗi.
+    Luồng tin nhắn, yêu cầu chỉnh sửa và gửi lại tài liệu.
+    Báo bug từ QA sang Dev thiếu thông tin, dẫn đến phải trao đổi lại nhiều lần.
+    Nguyên nhân: giao tiếp qua file rời/emails khiến thông tin bị phân mảnh, dễ hiểu sai ý nhau.
+    Giải pháp: dùng công cụ cộng tác trực tuyến như Figma, Google Docs và chuẩn hóa ticket lỗi.
 
 Hold (Chờ đợi)
 Event chờ phản hồi UAT.
