@@ -31,6 +31,7 @@
 - <b>27.08.2026:</b> Tạo slide với các nội dung đã có
 - <b>31.08.2026:</b> Hoàn thành slide về tất cả nội dung của quy trình 03
 - <b>31.08.2026:</b> Hoàn thành file "25410189_DoAn_QTQLCL-CTQT.docx"
+- <b>08.09.2026:</b> Fix 4 ảnh BPMN và lưu lại vào "25410189_DoAn_QTQLCL-CTQT.docx" (sau khi thuyết trình)
 
 
 ## Khó khăn khi thực hiện:
