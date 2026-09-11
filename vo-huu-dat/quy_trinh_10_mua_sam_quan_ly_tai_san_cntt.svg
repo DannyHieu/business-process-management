@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2350 1020" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#37474f" />
+    </marker>
+    <marker id="msg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ffffff" stroke="#546e7a" stroke-width="1.5" />
+    </marker>
+    <filter id="shadow" x="-3%" y="-5%" width="106%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <style>
+    .pool-title { font-weight: bold; font-size: 14px; fill: #263238; letter-spacing: 0.5px; }
+    .lane-title { font-weight: 600; font-size: 13px; fill: #37474f; }
+    .task-rect { fill: #ffffff; stroke: #0288d1; stroke-width: 1.5; rx: 8; filter: url(#shadow); }
+    .task-text { font-size: 12px; fill: #212121; text-anchor: middle; font-weight: 500; }
+    .gateway { fill: #fffde7; stroke: #fbc02d; stroke-width: 1.8; filter: url(#shadow); }
+    .gateway-x { font-size: 24px; font-weight: bold; fill: #f57f17; text-anchor: middle; dominant-baseline: central; }
+    .event-start { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; filter: url(#shadow); }
+    .event-end-success { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 4; stroke-dasharray: 0; filter: url(#shadow); }
+    .event-end-fail { fill: #ffebee; stroke: #c62828; stroke-width: 4; stroke-dasharray: 0; filter: url(#shadow); }
+    .seq-flow { stroke: #455a64; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+    .msg-flow { stroke: #546e7a; stroke-width: 1.5; stroke-dasharray: 5, 4; fill: none; marker-end: url(#msg-arrow); }
+    .flow-label { font-size: 11px; fill: #00838f; font-weight: 600; text-anchor: middle; background: white; }
+    .flow-label-fail { font-size: 11px; fill: #c62828; font-weight: 600; text-anchor: middle; }
+    .msg-label { font-size: 11px; fill: #455a64; font-style: italic; font-weight: 500; }
+    .rule-tag { fill: #e0f2fe; stroke: #0288d1; stroke-width: 1; rx: 4; }
+  </style>
+
+  <!-- ==================== POOL 1: FPT SOFTWARE ==================== -->
+  <rect x="50" y="40" width="2250" height="740" fill="#f8fafc" stroke="#64748b" stroke-width="1.8" rx="4"/>
+  <!-- Pool Header -->
+  <rect x="50" y="40" width="40" height="740" fill="#e2e8f0" stroke="#64748b" stroke-width="1.8"/>
+  <text x="-410" y="75" class="pool-title" transform="rotate(-90)" text-anchor="middle">DOANH NGHIỆP FPT SOFTWARE (ORGANIZATION POOL)</text>
+
+  <!-- Lane 1: Requester -->
+  <rect x="90" y="40" width="2210" height="140" fill="#f0fdf4" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="90" y="40" width="35" height="140" fill="#dcfce7" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="-110" y="112" class="lane-title" transform="rotate(-90)" text-anchor="middle">Nhân sự / PM (Requester)</text>
+
+  <!-- Lane 2: PMO -->
+  <rect x="90" y="180" width="2210" height="140" fill="#fefce8" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="90" y="180" width="35" height="140" fill="#fef9c3" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="-250" y="112" class="lane-title" transform="rotate(-90)" text-anchor="middle">Quản lý / PMO (Approver)</text>
+
+  <!-- Lane 3: IT Procurement -->
+  <rect x="90" y="320" width="2210" height="140" fill="#f0f9ff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="90" y="320" width="35" height="140" fill="#e0f2fe" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="-390" y="112" class="lane-title" transform="rotate(-90)" text-anchor="middle">Mua sắm CNTT (Procurement)</text>
+
+  <!-- Lane 4: ITAM -->
+  <rect x="90" y="460" width="2210" height="170" fill="#faf5ff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="90" y="460" width="35" height="170" fill="#f3e8ff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="-545" y="112" class="lane-title" transform="rotate(-90)" text-anchor="middle">Quản lý tài sản CNTT (ITAM)</text>
+
+  <!-- Lane 5: Accounting -->
+  <rect x="90" y="630" width="2210" height="150" fill="#fff7ed" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="90" y="630" width="35" height="150" fill="#ffedd5" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="-705" y="112" class="lane-title" transform="rotate(-90)" text-anchor="middle">Bộ phận Kế toán (Accounting)</text>
+
+  <!-- ==================== POOL 2: SUPPLIER ==================== -->
+  <rect x="50" y="850" width="2250" height="110" fill="#f1f5f9" stroke="#64748b" stroke-width="1.8" rx="4"/>
+  <rect x="50" y="850" width="40" height="110" fill="#cbd5e1" stroke="#64748b" stroke-width="1.8"/>
+  <text x="-905" y="75" class="pool-title" transform="rotate(-90)" text-anchor="middle">NHÀ CUNG CẤP CNTT (EXTERNAL SUPPLIER)</text>
+  <text x="1150" y="910" font-size="14" fill="#64748b" font-weight="600" text-anchor="middle">Đối tác cung cấp thiết bị phần cứng, bản quyền phần mềm và bảo hành</text>
+
+  <!-- ==================== ELEMENTS: LANE 1 REQUESTER ==================== -->
+  <!-- Start Event -->
+  <circle cx="170" cy="110" r="18" class="event-start" />
+  <text x="170" y="145" font-size="10.5" fill="#1b5e20" text-anchor="middle" font-weight="600">Phát sinh nhu cầu</text>
+
+  <!-- Task Send Req (1 IN, 1 OUT) -->
+  <rect x="230" y="80" width="130" height="60" class="task-rect"/>
+  <text x="295" y="107" class="task-text">Gửi yêu cầu</text>
+  <text x="295" y="123" class="task-text">trang bị CNTT</text>
+
+  <!-- Task Sign Stock (1 IN, 1 OUT) -->
+  <rect x="880" y="80" width="130" height="60" class="task-rect"/>
+  <text x="945" y="107" class="task-text">Ký nhận bàn giao</text>
+  <text x="945" y="123" class="task-text">(Tài sản từ kho)</text>
+
+  <!-- End Event Stock -->
+  <circle cx="1060" cy="110" r="18" class="event-end-success"/>
+  <circle cx="1060" cy="110" r="13" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="1060" y="145" font-size="10.5" fill="#1b5e20" text-anchor="middle" font-weight="600">Đã bàn giao (Kho)</text>
+
+  <!-- Task Sign New (1 IN, 1 OUT) -->
+  <rect x="1870" y="80" width="130" height="60" class="task-rect"/>
+  <text x="1935" y="107" class="task-text">Ký nhận bàn giao</text>
+  <text x="1935" y="123" class="task-text">(Thiết bị mới)</text>
+
+  <!-- ==================== ELEMENTS: LANE 4 ITAM (KHO) ==================== -->
+  <!-- Task Check Stock (1 IN, 1 OUT) -->
+  <rect x="230" y="515" width="130" height="60" class="task-rect"/>
+  <text x="295" y="542" class="task-text">Kiểm tra kho</text>
+  <text x="295" y="558" class="task-text">tài sản hiện có</text>
+
+  <!-- Gateway Stock (XOR Split) -->
+  <polygon points="410,545 435,520 460,545 435,570" class="gateway"/>
+  <text x="435" y="545" class="gateway-x">×</text>
+  <text x="435" y="585" font-size="11" fill="#f57f17" font-weight="bold" text-anchor="middle">Kiểm kho?</text>
+
+  <!-- Task Config Stock (1 IN, 1 OUT) -->
+  <rect x="550" y="515" width="130" height="60" class="task-rect"/>
+  <text x="615" y="542" class="task-text">Cài đặt cấu hình</text>
+  <text x="615" y="558" class="task-text">chuẩn hóa (Kho)</text>
+
+  <!-- Task Handover Stock (1 IN, 1 OUT) -->
+  <rect x="720" y="515" width="130" height="60" class="task-rect"/>
+  <text x="785" y="542" class="task-text">Bàn giao tài sản</text>
+  <text x="785" y="558" class="task-text">từ kho cho NS</text>
+
+  <!-- ==================== ELEMENTS: LANE 2 PMO ==================== -->
+  <!-- Task Review Budget (1 IN, 1 OUT) -->
+  <rect x="480" y="220" width="130" height="60" class="task-rect"/>
+  <text x="545" y="247" class="task-text">Xem xét ngân sách</text>
+  <text x="545" y="263" class="task-text">mua sắm dự án</text>
+
+  <!-- Gateway Budget (XOR Split) -->
+  <polygon points="660,250 685,225 710,250 685,275" class="gateway"/>
+  <text x="685" y="250" class="gateway-x">×</text>
+  <text x="685" y="215" font-size="11" fill="#f57f17" font-weight="bold" text-anchor="middle">Duyệt NS?</text>
+
+  <!-- Task Reject (1 IN, 1 OUT) -->
+  <rect x="760" y="220" width="130" height="60" class="task-rect" style="stroke: #e53935;"/>
+  <text x="825" y="247" class="task-text" fill="#b71c1c">Gửi thông báo</text>
+  <text x="825" y="263" class="task-text" fill="#b71c1c">từ chối mua sắm</text>
+
+  <!-- End Event Reject -->
+  <circle cx="940" cy="250" r="18" class="event-end-fail"/>
+  <circle cx="940" cy="250" r="13" fill="none" stroke="#c62828" stroke-width="1.5"/>
+  <text x="940" y="285" font-size="10.5" fill="#c62828" text-anchor="middle" font-weight="600">Yêu cầu bị hủy</text>
+
+  <!-- ==================== ELEMENTS: LANE 3 PROCUREMENT ==================== -->
+  <!-- Task Survey (1 IN, 1 OUT) -->
+  <rect x="760" y="360" width="130" height="60" class="task-rect"/>
+  <text x="825" y="387" class="task-text">Khảo sát báo giá</text>
+  <text x="825" y="403" class="task-text">Nhà cung cấp</text>
+
+  <!-- Task Select Vendor (1 IN, 1 OUT) -->
+  <rect x="940" y="360" width="130" height="60" class="task-rect"/>
+  <text x="1005" y="387" class="task-text">Lựa chọn Nhà</text>
+  <text x="1005" y="403" class="task-text">cung cấp phù hợp</text>
+
+  <!-- Task Create PO (1 IN, 1 OUT) -->
+  <rect x="1120" y="360" width="130" height="60" class="task-rect"/>
+  <text x="1185" y="387" class="task-text">Phát hành Đơn</text>
+  <text x="1185" y="403" class="task-text">đặt hàng (PO)</text>
+
+  <!-- ==================== ELEMENTS: LANE 4 ITAM (MUA MỚI) ==================== -->
+  <!-- Gateway Inspect Join (XOR Join: PO in & Loop return in -> 1 OUT) -->
+  <polygon points="1270,545 1295,520 1320,545 1295,570" class="gateway"/>
+  <text x="1295" y="545" class="gateway-x">×</text>
+  <text x="1295" y="510" font-size="10" fill="#f57f17" font-weight="bold" text-anchor="middle">XOR Join</text>
+
+  <!-- Task Inspect (1 IN, 1 OUT) -->
+  <rect x="1360" y="515" width="130" height="60" class="task-rect"/>
+  <text x="1425" y="542" class="task-text">Kiểm định chất</text>
+  <text x="1425" y="558" class="task-text">lượng thiết bị</text>
+
+  <!-- Gateway Inspect (XOR Split) -->
+  <polygon points="1530,545 1555,520 1580,545 1555,570" class="gateway"/>
+  <text x="1555" y="545" class="gateway-x">×</text>
+  <text x="1555" y="512" font-size="10.5" fill="#f57f17" font-weight="bold" text-anchor="middle">Đạt chuẩn?</text>
+
+  <!-- Task Return Vendor (Loopback via Join) -->
+  <rect x="1360" y="590" width="130" height="35" class="task-rect" style="stroke: #fb8c00; rx: 4;"/>
+  <text x="1425" y="612" font-size="10.5" fill="#e65100" text-anchor="middle" font-weight="600">Yêu cầu NCC đổi trả</text>
+
+  <!-- Task Asset Tag (1 IN, 1 OUT) -->
+  <rect x="1620" y="515" width="120" height="60" class="task-rect"/>
+  <text x="1680" y="542" class="task-text">Dán mã quản lý</text>
+  <text x="1680" y="558" class="task-text">(Asset Tagging)</text>
+
+  <!-- Task Config New (1 IN, 1 OUT) -->
+  <rect x="1770" y="515" width="120" height="60" class="task-rect"/>
+  <text x="1830" y="542" class="task-text">Cài đặt phần mềm</text>
+  <text x="1830" y="558" class="task-text">chuẩn hóa</text>
+
+  <!-- Task Handover New (1 IN, 1 OUT) -->
+  <rect x="1920" y="515" width="120" height="60" class="task-rect"/>
+  <text x="1980" y="542" class="task-text">Bàn giao thiết bị</text>
+  <text x="1980" y="558" class="task-text">mới cho nhân sự</text>
+
+  <!-- Task Update CMDB (1 IN, 1 OUT) -->
+  <rect x="2070" y="515" width="120" height="60" class="task-rect"/>
+  <text x="2130" y="542" class="task-text">Cập nhật CSDL</text>
+  <text x="2130" y="558" class="task-text">tài sản (CMDB)</text>
+
+  <!-- ==================== ELEMENTS: LANE 5 ACCOUNTING ==================== -->
+  <!-- Task Payment (1 IN, 1 OUT) -->
+  <rect x="2070" y="675" width="120" height="60" class="task-rect"/>
+  <text x="2130" y="702" class="task-text">Thanh toán hóa đơn</text>
+  <text x="2130" y="718" class="task-text">cho Nhà cung cấp</text>
+
+  <!-- End Event Success -->
+  <circle cx="2240" cy="705" r="18" class="event-end-success"/>
+  <circle cx="2240" cy="705" r="13" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="2240" y="740" font-size="10.5" fill="#1b5e20" text-anchor="middle" font-weight="600">Hoàn tất quy trình</text>
+
+  <!-- ==================== SEQUENCE FLOWS ==================== -->
+  <!-- Start -> SendReq -->
+  <path d="M 188 110 L 230 110" class="seq-flow"/>
+
+  <!-- SendReq -> CheckStock -->
+  <path d="M 295 140 L 295 515" class="seq-flow"/>
+
+  <!-- CheckStock -> Gateway Stock -->
+  <path d="M 360 545 L 410 545" class="seq-flow"/>
+
+  <!-- Gateway Stock -> Config Stock (Có sẵn kho 30%) -->
+  <path d="M 460 545 L 550 545" class="seq-flow"/>
+  <text x="505" y="535" class="flow-label">Có sẵn (30%)</text>
+
+  <!-- Config Stock -> Handover Stock -->
+  <path d="M 680 545 L 720 545" class="seq-flow"/>
+
+  <!-- Handover Stock -> Sign Stock -->
+  <path d="M 785 515 L 785 110 L 880 110" class="seq-flow"/>
+
+  <!-- Sign Stock -> End Event Stock -->
+  <path d="M 1010 110 L 1042 110" class="seq-flow"/>
+
+  <!-- Gateway Stock -> Review Budget (Không có 70%) -->
+  <path d="M 435 520 L 435 250 L 480 250" class="seq-flow"/>
+  <text x="425" y="380" class="flow-label" transform="rotate(-90 425 380)">Hết kho (70%)</text>
+
+  <!-- Review Budget -> Gateway Budget -->
+  <path d="M 610 250 L 660 250" class="seq-flow"/>
+
+  <!-- Gateway Budget -> Reject (Vượt ngân sách 10%) -->
+  <path d="M 710 250 L 760 250" class="seq-flow"/>
+  <text x="735" y="240" class="flow-label-fail">Từ chối (10%)</text>
+
+  <!-- Reject -> End Event Reject -->
+  <path d="M 890 250 L 922 250" class="seq-flow"/>
+
+  <!-- Gateway Budget -> Survey (Hợp lệ 90%) -->
+  <path d="M 685 275 L 685 390 L 760 390" class="seq-flow"/>
+  <text x="695" y="335" class="flow-label">Duyệt (90%)</text>
+
+  <!-- Survey -> Select Vendor -->
+  <path d="M 890 390 L 940 390" class="seq-flow"/>
+
+  <!-- Select Vendor -> Create PO -->
+  <path d="M 1070 390 L 1120 390" class="seq-flow"/>
+
+  <!-- Create PO -> XOR Join (Giao hàng) -->
+  <path d="M 1250 390 L 1295 390 L 1295 520" class="seq-flow"/>
+
+  <!-- XOR Join -> Inspect (Strictly 1 IN to Task) -->
+  <path d="M 1320 545 L 1360 545" class="seq-flow"/>
+
+  <!-- Inspect -> Gateway Inspect (Strictly 1 OUT from Task) -->
+  <path d="M 1490 545 L 1530 545" class="seq-flow"/>
+
+  <!-- Gateway Inspect -> Return Vendor (Không đạt 5%) -->
+  <path d="M 1555 570 L 1555 607 L 1490 607" class="seq-flow"/>
+  <text x="1565" y="595" class="flow-label-fail">Lỗi (5%)</text>
+
+  <!-- Return Vendor -> Loop back to XOR Join -->
+  <path d="M 1360 607 L 1295 607 L 1295 570" class="seq-flow"/>
+
+  <!-- Gateway Inspect -> Asset Tag (Đạt chuẩn 95%) -->
+  <path d="M 1580 545 L 1620 545" class="seq-flow"/>
+  <text x="1600" y="535" class="flow-label">Đạt (95%)</text>
+
+  <!-- Asset Tag -> Config New -->
+  <path d="M 1740 545 L 1770 545" class="seq-flow"/>
+
+  <!-- Config New -> Handover New -->
+  <path d="M 1890 545 L 1920 545" class="seq-flow"/>
+
+  <!-- Handover New -> Sign New -->
+  <path d="M 1980 515 L 1980 140" class="seq-flow"/>
+
+  <!-- Sign New -> Update CMDB -->
+  <path d="M 2000 110 L 2130 110 L 2130 515" class="seq-flow"/>
+
+  <!-- Update CMDB -> Payment -->
+  <path d="M 2130 575 L 2130 675" class="seq-flow"/>
+
+  <!-- Payment -> End Event Success -->
+  <path d="M 2190 705 L 2222 705" class="seq-flow"/>
+
+  <!-- ==================== MESSAGE FLOWS (Giữa Pools) ==================== -->
+  <!-- Survey -> Supplier -->
+  <path d="M 810 420 L 810 850" class="msg-flow"/>
+  <text x="820" y="800" class="msg-label">Yêu cầu báo giá</text>
+
+  <!-- Supplier -> Survey -->
+  <path d="M 840 850 L 840 420" class="msg-flow"/>
+  <text x="850" y="820" class="msg-label">Gửi bảng báo giá</text>
+
+  <!-- Create PO -> Supplier -->
+  <path d="M 1185 420 L 1185 850" class="msg-flow"/>
+  <text x="1195" y="810" class="msg-label">Phát hành PO</text>
+
+  <!-- Supplier -> Inspect (Giao hàng) -->
+  <path d="M 1425 850 L 1425 625" class="msg-flow"/>
+  <text x="1435" y="810" class="msg-label">Giao hàng &#38; Hóa đơn</text>
+
+  <!-- Payment -> Supplier -->
+  <path d="M 2130 735 L 2130 850" class="msg-flow"/>
+  <text x="2140" y="810" class="msg-label">Chuyển khoản thanh toán</text>
+
+</svg>

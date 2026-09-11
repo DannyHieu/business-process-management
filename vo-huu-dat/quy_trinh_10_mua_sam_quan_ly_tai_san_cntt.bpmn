@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  id="Definitions_ITProcurement"
+                  targetNamespace="http://bpmn.io/schema/bpmn"
+                  exporter="Camunda Modeler"
+                  exporterVersion="5.20.0">
+
+  <bpmn:collaboration id="Collaboration_Procurement">
+    <bpmn:participant id="Participant_FPT" name="Doanh nghiệp FPT Software" processRef="Process_FPT" />
+    <bpmn:participant id="Participant_Supplier" name="Nhà cung cấp CNTT (External IT Supplier)" />
+    
+    <!-- Message flows between Pools -->
+    <bpmn:messageFlow id="MsgFlow_QuoteReq" name="Yêu cầu báo giá" sourceRef="Task_Survey" targetRef="Participant_Supplier" />
+    <bpmn:messageFlow id="MsgFlow_QuoteResp" name="Bảng báo giá thiết bị" sourceRef="Participant_Supplier" targetRef="Task_Survey" />
+    <bpmn:messageFlow id="MsgFlow_PO" name="Đơn đặt hàng (PO)" sourceRef="Task_CreatePO" targetRef="Participant_Supplier" />
+    <bpmn:messageFlow id="MsgFlow_Delivery" name="Thiết bị &#38; Hóa đơn GTGT" sourceRef="Participant_Supplier" targetRef="Task_Inspect" />
+    <bpmn:messageFlow id="MsgFlow_Return" name="Biên bản đổi trả hàng lỗi" sourceRef="Task_ReturnVendor" targetRef="Participant_Supplier" />
+    <bpmn:messageFlow id="MsgFlow_Payment" name="Chứng từ thanh toán / Ủy nhiệm chi" sourceRef="Task_Payment" targetRef="Participant_Supplier" />
+  </bpmn:collaboration>
+
+  <bpmn:process id="Process_FPT" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_FPT">
+      <!-- Lane 1: Requester -->
+      <bpmn:lane id="Lane_Requester" name="Nhân sự / Quản lý dự án (Requester)">
+        <bpmn:flowNodeRef>Event_Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SendReq</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SignStock</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_EndStock</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SignNew</bpmn:flowNodeRef>
+      </bpmn:lane>
+
+      <!-- Lane 2: PMO / Line Manager -->
+      <bpmn:lane id="Lane_PMO" name="Quản lý dự án / PMO (Approver)">
+        <bpmn:flowNodeRef>Task_ReviewBudget</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Budget</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Reject</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_EndReject</bpmn:flowNodeRef>
+      </bpmn:lane>
+
+      <!-- Lane 3: IT Procurement -->
+      <bpmn:lane id="Lane_Procurement" name="Bộ phận Mua sắm CNTT (IT Procurement)">
+        <bpmn:flowNodeRef>Task_Survey</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SelectVendor</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CreatePO</bpmn:flowNodeRef>
+      </bpmn:lane>
+
+      <!-- Lane 4: IT Asset Management (ITAM) -->
+      <bpmn:lane id="Lane_ITAM" name="Bộ phận Quản lý Tài sản CNTT (ITAM Team)">
+        <bpmn:flowNodeRef>Task_CheckStock</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Stock</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ConfigStock</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_HandoverStock</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_InspectJoin</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Inspect</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Inspect</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReturnVendor</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AssetTag</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ConfigNew</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_HandoverNew</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_UpdateCMDB</bpmn:flowNodeRef>
+      </bpmn:lane>
+
+      <!-- Lane 5: Accounting -->
+      <bpmn:lane id="Lane_Accounting" name="Bộ phận Kế toán (Accounting)">
+        <bpmn:flowNodeRef>Task_Payment</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_EndSuccess</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+
+    <!-- Requester Elements -->
+    <bpmn:startEvent id="Event_Start" name="Nhu cầu tài sản CNTT phát sinh">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+
+    <bpmn:task id="Task_SendReq" name="Gửi yêu cầu trang bị CNTT">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_SignStock" name="Ký nhận bàn giao tài sản kho">
+      <bpmn:incoming>Flow_StockHandover</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToEndStock</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:endEvent id="Event_EndStock" name="Tài sản đã bàn giao từ kho">
+      <bpmn:incoming>Flow_ToEndStock</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:task id="Task_SignNew" name="Ký nhận bàn giao tài sản mới">
+      <bpmn:incoming>Flow_NewHandover</bpmn:incoming>
+      <bpmn:outgoing>Flow_AfterSignNew</bpmn:outgoing>
+    </bpmn:task>
+
+    <!-- ITAM Elements (Kho) -->
+    <bpmn:task id="Task_CheckStock" name="Kiểm tra kho tài sản hiện có">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToCheckStockGate</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:exclusiveGateway id="Gateway_Stock" name="Kiểm tra kho?">
+      <bpmn:incoming>Flow_ToCheckStockGate</bpmn:incoming>
+      <bpmn:outgoing>Flow_StockYes</bpmn:outgoing>
+      <bpmn:outgoing>Flow_StockNo</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+
+    <bpmn:task id="Task_ConfigStock" name="Cài đặt cấu hình chuẩn (Kho)">
+      <bpmn:incoming>Flow_StockYes</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToHandoverStock</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_HandoverStock" name="Bàn giao tài sản từ kho">
+      <bpmn:incoming>Flow_ToHandoverStock</bpmn:incoming>
+      <bpmn:outgoing>Flow_StockHandover</bpmn:outgoing>
+    </bpmn:task>
+
+    <!-- PMO Elements -->
+    <bpmn:task id="Task_ReviewBudget" name="Xem xét ngân sách mua sắm">
+      <bpmn:incoming>Flow_StockNo</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToBudgetGate</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:exclusiveGateway id="Gateway_Budget" name="Phê duyệt ngân sách?">
+      <bpmn:incoming>Flow_ToBudgetGate</bpmn:incoming>
+      <bpmn:outgoing>Flow_BudgetReject</bpmn:outgoing>
+      <bpmn:outgoing>Flow_BudgetApprove</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+
+    <bpmn:task id="Task_Reject" name="Gửi thông báo từ chối mua sắm">
+      <bpmn:incoming>Flow_BudgetReject</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToRejectEnd</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:endEvent id="Event_EndReject" name="Yêu cầu mua sắm bị từ chối">
+      <bpmn:incoming>Flow_ToRejectEnd</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <!-- Procurement Elements -->
+    <bpmn:task id="Task_Survey" name="Khảo sát báo giá Nhà cung cấp">
+      <bpmn:incoming>Flow_BudgetApprove</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToSelectVendor</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_SelectVendor" name="Lựa chọn Nhà cung cấp phù hợp">
+      <bpmn:incoming>Flow_ToSelectVendor</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToCreatePO</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_CreatePO" name="Phát hành Đơn đặt hàng (PO)">
+      <bpmn:incoming>Flow_ToCreatePO</bpmn:incoming>
+      <bpmn:outgoing>Flow_POToJoin</bpmn:outgoing>
+    </bpmn:task>
+
+    <!-- ITAM Elements (Mua mới) -->
+    <bpmn:exclusiveGateway id="Gateway_InspectJoin" name="Tiếp nhận thiết bị (XOR Join)">
+      <bpmn:incoming>Flow_POToJoin</bpmn:incoming>
+      <bpmn:incoming>Flow_ReturnLoop</bpmn:incoming>
+      <bpmn:outgoing>Flow_JoinToInspect</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+
+    <bpmn:task id="Task_Inspect" name="Kiểm định chất lượng thiết bị">
+      <bpmn:incoming>Flow_JoinToInspect</bpmn:incoming>
+      <bpmn:outgoing>Flow_InspectToGate</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:exclusiveGateway id="Gateway_Inspect" name="Thiết bị đạt chuẩn?">
+      <bpmn:incoming>Flow_InspectToGate</bpmn:incoming>
+      <bpmn:outgoing>Flow_InspectFail</bpmn:outgoing>
+      <bpmn:outgoing>Flow_InspectPass</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+
+    <bpmn:task id="Task_ReturnVendor" name="Yêu cầu Nhà cung cấp đổi trả">
+      <bpmn:incoming>Flow_InspectFail</bpmn:incoming>
+      <bpmn:outgoing>Flow_ReturnLoop</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_AssetTag" name="Dán mã quản lý tài sản (Asset Tagging)">
+      <bpmn:incoming>Flow_InspectPass</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToConfigNew</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_ConfigNew" name="Cài đặt phần mềm chuẩn hóa">
+      <bpmn:incoming>Flow_ToConfigNew</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToHandoverNew</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_HandoverNew" name="Bàn giao tài sản mới cho nhân sự">
+      <bpmn:incoming>Flow_ToHandoverNew</bpmn:incoming>
+      <bpmn:outgoing>Flow_NewHandover</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_UpdateCMDB" name="Cập nhật cơ sở dữ liệu tài sản">
+      <bpmn:incoming>Flow_AfterSignNew</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToPayment</bpmn:outgoing>
+    </bpmn:task>
+
+    <!-- Accounting Elements -->
+    <bpmn:task id="Task_Payment" name="Thanh toán hóa đơn cho Nhà cung cấp">
+      <bpmn:incoming>Flow_ToPayment</bpmn:incoming>
+      <bpmn:outgoing>Flow_ToEndSuccess</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:endEvent id="Event_EndSuccess" name="Tài sản CNTT đã trang bị thành công">
+      <bpmn:incoming>Flow_ToEndSuccess</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <!-- Sequence Flows Definitions -->
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Event_Start" targetRef="Task_SendReq" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_SendReq" targetRef="Task_CheckStock" />
+    <bpmn:sequenceFlow id="Flow_ToCheckStockGate" sourceRef="Task_CheckStock" targetRef="Gateway_Stock" />
+    <bpmn:sequenceFlow id="Flow_StockYes" name="Có sẵn kho (30%)" sourceRef="Gateway_Stock" targetRef="Task_ConfigStock" />
+    <bpmn:sequenceFlow id="Flow_ToHandoverStock" sourceRef="Task_ConfigStock" targetRef="Task_HandoverStock" />
+    <bpmn:sequenceFlow id="Flow_StockHandover" sourceRef="Task_HandoverStock" targetRef="Task_SignStock" />
+    <bpmn:sequenceFlow id="Flow_ToEndStock" sourceRef="Task_SignStock" targetRef="Event_EndStock" />
+
+    <bpmn:sequenceFlow id="Flow_StockNo" name="Không có trong kho (70%)" sourceRef="Gateway_Stock" targetRef="Task_ReviewBudget" />
+    <bpmn:sequenceFlow id="Flow_ToBudgetGate" sourceRef="Task_ReviewBudget" targetRef="Gateway_Budget" />
+    <bpmn:sequenceFlow id="Flow_BudgetReject" name="Vượt ngân sách (10%)" sourceRef="Gateway_Budget" targetRef="Task_Reject" />
+    <bpmn:sequenceFlow id="Flow_ToRejectEnd" sourceRef="Task_Reject" targetRef="Event_EndReject" />
+    <bpmn:sequenceFlow id="Flow_BudgetApprove" name="Hợp lệ (90%)" sourceRef="Gateway_Budget" targetRef="Task_Survey" />
+
+    <bpmn:sequenceFlow id="Flow_ToSelectVendor" sourceRef="Task_Survey" targetRef="Task_SelectVendor" />
+    <bpmn:sequenceFlow id="Flow_ToCreatePO" sourceRef="Task_SelectVendor" targetRef="Task_CreatePO" />
+    <bpmn:sequenceFlow id="Flow_POToJoin" sourceRef="Task_CreatePO" targetRef="Gateway_InspectJoin" />
+    
+    <bpmn:sequenceFlow id="Flow_JoinToInspect" sourceRef="Gateway_InspectJoin" targetRef="Task_Inspect" />
+    <bpmn:sequenceFlow id="Flow_InspectToGate" sourceRef="Task_Inspect" targetRef="Gateway_Inspect" />
+    <bpmn:sequenceFlow id="Flow_InspectFail" name="Không đạt (5%)" sourceRef="Gateway_Inspect" targetRef="Task_ReturnVendor" />
+    <bpmn:sequenceFlow id="Flow_ReturnLoop" sourceRef="Task_ReturnVendor" targetRef="Gateway_InspectJoin" />
+    <bpmn:sequenceFlow id="Flow_InspectPass" name="Đạt chuẩn (95%)" sourceRef="Gateway_Inspect" targetRef="Task_AssetTag" />
+    <bpmn:sequenceFlow id="Flow_ToConfigNew" sourceRef="Task_AssetTag" targetRef="Task_ConfigNew" />
+    <bpmn:sequenceFlow id="Flow_ToHandoverNew" sourceRef="Task_ConfigNew" targetRef="Task_HandoverNew" />
+    <bpmn:sequenceFlow id="Flow_NewHandover" sourceRef="Task_HandoverNew" targetRef="Task_SignNew" />
+    <bpmn:sequenceFlow id="Flow_AfterSignNew" sourceRef="Task_SignNew" targetRef="Task_UpdateCMDB" />
+    <bpmn:sequenceFlow id="Flow_ToPayment" sourceRef="Task_UpdateCMDB" targetRef="Task_Payment" />
+    <bpmn:sequenceFlow id="Flow_ToEndSuccess" sourceRef="Task_Payment" targetRef="Event_EndSuccess" />
+
+  </bpmn:process>
+
+  <!-- DIAGRAM INTERCHANGE -->
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_Procurement">
+      
+      <!-- Pools -->
+      <bpmndi:BPMNShape id="Participant_FPT_di" bpmnElement="Participant_FPT" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="2220" height="740" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Lane_Requester_di" bpmnElement="Lane_Requester" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="2190" height="150" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Lane_PMO_di" bpmnElement="Lane_PMO" isHorizontal="true">
+        <dc:Bounds x="190" y="230" width="2190" height="140" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Lane_Procurement_di" bpmnElement="Lane_Procurement" isHorizontal="true">
+        <dc:Bounds x="190" y="370" width="2190" height="140" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Lane_ITAM_di" bpmnElement="Lane_ITAM" isHorizontal="true">
+        <dc:Bounds x="190" y="510" width="2190" height="170" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Lane_Accounting_di" bpmnElement="Lane_Accounting" isHorizontal="true">
+        <dc:Bounds x="190" y="680" width="2190" height="140" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Participant_Supplier_di" bpmnElement="Participant_Supplier" isHorizontal="true">
+        <dc:Bounds x="160" y="870" width="2220" height="100" />
+      </bpmndi:BPMNShape>
+
+      <!-- Requester Lane Shapes -->
+      <bpmndi:BPMNShape id="Event_Start_di" bpmnElement="Event_Start">
+        <dc:Bounds x="232" y="137" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="215" y="180" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_SendReq_di" bpmnElement="Task_SendReq">
+        <dc:Bounds x="320" y="115" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_SignStock_di" bpmnElement="Task_SignStock">
+        <dc:Bounds x="930" y="115" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Event_EndStock_di" bpmnElement="Event_EndStock">
+        <dc:Bounds x="1102" y="137" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1080" y="180" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_SignNew_di" bpmnElement="Task_SignNew">
+        <dc:Bounds x="1890" y="115" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <!-- ITAM (Kho) Shapes -->
+      <bpmndi:BPMNShape id="Task_CheckStock_di" bpmnElement="Task_CheckStock">
+        <dc:Bounds x="320" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Gateway_Stock_di" bpmnElement="Gateway_Stock" isMarkerVisible="true">
+        <dc:Bounds x="485" y="570" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="473" y="627" width="74" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_ConfigStock_di" bpmnElement="Task_ConfigStock">
+        <dc:Bounds x="610" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_HandoverStock_di" bpmnElement="Task_HandoverStock">
+        <dc:Bounds x="770" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <!-- PMO Shapes -->
+      <bpmndi:BPMNShape id="Task_ReviewBudget_di" bpmnElement="Task_ReviewBudget">
+        <dc:Bounds x="450" y="260" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Gateway_Budget_di" bpmnElement="Gateway_Budget" isMarkerVisible="true">
+        <dc:Bounds x="625" y="275" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="617" y="245" width="67" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_Reject_di" bpmnElement="Task_Reject">
+        <dc:Bounds x="730" y="260" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Event_EndReject_di" bpmnElement="Event_EndReject">
+        <dc:Bounds x="902" y="282" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="880" y="325" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <!-- Procurement Shapes -->
+      <bpmndi:BPMNShape id="Task_Survey_di" bpmnElement="Task_Survey">
+        <dc:Bounds x="730" y="400" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_SelectVendor_di" bpmnElement="Task_SelectVendor">
+        <dc:Bounds x="890" y="400" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_CreatePO_di" bpmnElement="Task_CreatePO">
+        <dc:Bounds x="1050" y="400" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <!-- ITAM (Mua mới) Shapes -->
+      <bpmndi:BPMNShape id="Gateway_InspectJoin_di" bpmnElement="Gateway_InspectJoin" isMarkerVisible="true">
+        <dc:Bounds x="1215" y="570" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1200" y="540" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_Inspect_di" bpmnElement="Task_Inspect">
+        <dc:Bounds x="1310" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Gateway_Inspect_di" bpmnElement="Gateway_Inspect" isMarkerVisible="true">
+        <dc:Bounds x="1475" y="570" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1465" y="533" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_ReturnVendor_di" bpmnElement="Task_ReturnVendor">
+        <dc:Bounds x="1310" y="630" width="120" height="40" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_AssetTag_di" bpmnElement="Task_AssetTag">
+        <dc:Bounds x="1570" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_ConfigNew_di" bpmnElement="Task_ConfigNew">
+        <dc:Bounds x="1730" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_HandoverNew_di" bpmnElement="Task_HandoverNew">
+        <dc:Bounds x="1890" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Task_UpdateCMDB_di" bpmnElement="Task_UpdateCMDB">
+        <dc:Bounds x="2050" y="555" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <!-- Accounting Shapes -->
+      <bpmndi:BPMNShape id="Task_Payment_di" bpmnElement="Task_Payment">
+        <dc:Bounds x="2050" y="710" width="120" height="80" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="Event_EndSuccess_di" bpmnElement="Event_EndSuccess">
+        <dc:Bounds x="2222" y="732" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2200" y="775" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <!-- Edges -->
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="268" y="155" />
+        <di:waypoint x="320" y="155" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="380" y="195" />
+        <di:waypoint x="380" y="555" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToCheckStockGate_di" bpmnElement="Flow_ToCheckStockGate">
+        <di:waypoint x="440" y="595" />
+        <di:waypoint x="485" y="595" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_StockYes_di" bpmnElement="Flow_StockYes">
+        <di:waypoint x="535" y="595" />
+        <di:waypoint x="610" y="595" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="530" y="577" width="84" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToHandoverStock_di" bpmnElement="Flow_ToHandoverStock">
+        <di:waypoint x="730" y="595" />
+        <di:waypoint x="770" y="595" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_StockHandover_di" bpmnElement="Flow_StockHandover">
+        <di:waypoint x="830" y="555" />
+        <di:waypoint x="830" y="155" />
+        <di:waypoint x="930" y="155" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToEndStock_di" bpmnElement="Flow_ToEndStock">
+        <di:waypoint x="1050" y="155" />
+        <di:waypoint x="1102" y="155" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_StockNo_di" bpmnElement="Flow_StockNo">
+        <di:waypoint x="510" y="570" />
+        <di:waypoint x="510" y="340" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="512" y="440" width="85" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToBudgetGate_di" bpmnElement="Flow_ToBudgetGate">
+        <di:waypoint x="570" y="300" />
+        <di:waypoint x="625" y="300" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_BudgetReject_di" bpmnElement="Flow_BudgetReject">
+        <di:waypoint x="675" y="300" />
+        <di:waypoint x="730" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="668" y="271" width="85" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToRejectEnd_di" bpmnElement="Flow_ToRejectEnd">
+        <di:waypoint x="850" y="300" />
+        <di:waypoint x="902" y="300" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_BudgetApprove_di" bpmnElement="Flow_BudgetApprove">
+        <di:waypoint x="650" y="325" />
+        <di:waypoint x="650" y="440" />
+        <di:waypoint x="730" y="440" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="653" y="380" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToSelectVendor_di" bpmnElement="Flow_ToSelectVendor">
+        <di:waypoint x="850" y="440" />
+        <di:waypoint x="890" y="440" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToCreatePO_di" bpmnElement="Flow_ToCreatePO">
+        <di:waypoint x="1010" y="440" />
+        <di:waypoint x="1050" y="440" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_POToJoin_di" bpmnElement="Flow_POToJoin">
+        <di:waypoint x="1110" y="480" />
+        <di:waypoint x="1110" y="595" />
+        <di:waypoint x="1215" y="595" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_JoinToInspect_di" bpmnElement="Flow_JoinToInspect">
+        <di:waypoint x="1265" y="595" />
+        <di:waypoint x="1310" y="595" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_InspectToGate_di" bpmnElement="Flow_InspectToGate">
+        <di:waypoint x="1430" y="595" />
+        <di:waypoint x="1475" y="595" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_InspectFail_di" bpmnElement="Flow_InspectFail">
+        <di:waypoint x="1500" y="620" />
+        <di:waypoint x="1500" y="650" />
+        <di:waypoint x="1430" y="650" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1455" y="653" width="75" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ReturnLoop_di" bpmnElement="Flow_ReturnLoop">
+        <di:waypoint x="1310" y="650" />
+        <di:waypoint x="1240" y="650" />
+        <di:waypoint x="1240" y="620" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_InspectPass_di" bpmnElement="Flow_InspectPass">
+        <di:waypoint x="1525" y="595" />
+        <di:waypoint x="1570" y="595" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1505" y="577" width="81" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToConfigNew_di" bpmnElement="Flow_ToConfigNew">
+        <di:waypoint x="1690" y="595" />
+        <di:waypoint x="1730" y="595" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToHandoverNew_di" bpmnElement="Flow_ToHandoverNew">
+        <di:waypoint x="1850" y="595" />
+        <di:waypoint x="1890" y="595" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_NewHandover_di" bpmnElement="Flow_NewHandover">
+        <di:waypoint x="1950" y="555" />
+        <di:waypoint x="1950" y="195" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_AfterSignNew_di" bpmnElement="Flow_AfterSignNew">
+        <di:waypoint x="2010" y="155" />
+        <di:waypoint x="2110" y="155" />
+        <di:waypoint x="2110" y="555" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToPayment_di" bpmnElement="Flow_ToPayment">
+        <di:waypoint x="2110" y="635" />
+        <di:waypoint x="2110" y="710" />
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="Flow_ToEndSuccess_di" bpmnElement="Flow_ToEndSuccess">
+        <di:waypoint x="2170" y="750" />
+        <di:waypoint x="2222" y="750" />
+      </bpmndi:BPMNEdge>
+
+      <!-- Message Flow Edges -->
+      <bpmndi:BPMNEdge id="MsgFlow_QuoteReq_di" bpmnElement="MsgFlow_QuoteReq">
+        <di:waypoint x="790" y="480" />
+        <di:waypoint x="790" y="870" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="795" y="830" width="79" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="MsgFlow_PO_di" bpmnElement="MsgFlow_PO">
+        <di:waypoint x="1110" y="480" />
+        <di:waypoint x="1110" y="870" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1115" y="830" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="MsgFlow_Delivery_di" bpmnElement="MsgFlow_Delivery">
+        <di:waypoint x="1370" y="870" />
+        <di:waypoint x="1370" y="635" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1375" y="830" width="85" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="MsgFlow_Payment_di" bpmnElement="MsgFlow_Payment">
+        <di:waypoint x="2110" y="790" />
+        <di:waypoint x="2110" y="870" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2115" y="830" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
